@@ -7,7 +7,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort( (a, b) => {
+    return a < b;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
