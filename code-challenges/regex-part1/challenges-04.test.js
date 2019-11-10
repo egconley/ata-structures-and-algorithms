@@ -29,7 +29,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  return str.match(/\b[A-Z][A-Za-z]+\b/g);
+  let regex = /\b[A-Z][A-Za-z]+\b/g;
+  if (regex.test(str)===true) {
+    return str.match(regex);
+  } else {
+    return [];
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,14 +45,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   let newArray = [];
-  let regex = /\b[A-J][A-Za-z]+\b/g;
-  for (let i=0; i<arr.length; i++) {
-    if (regex.test(arr[i])===true) {
-      newArray.push(arr[i]);
+  let regex = /^[A-J]\w+/;
+  arr.forEach(city => {
+    if (regex.test(city)===true) {
+      newArray.push(city);
     }
-  }
+  });
   return newArray;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -62,7 +67,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let regex = /(oct)/i;
+  let regex = /\b[Oo]ct(ober)*\b/;
   return regex.test(input);
 };
 
@@ -77,7 +82,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  return str.match(/\b[A-Za-z]+\b\s/g)
+  return str.match(/\b[A-Za-z0-9]+\b\s/g)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,7 +115,7 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
+  return str.match(/\b[A-Za-z]+ells+\b/g)
 };
 
 /* ------------------------------------------------------------------------------------------------
