@@ -12,7 +12,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  let filtered = input.map(index => {
+    let targets = index.filter(n => n===target);
+    // console.log(targets);
+    return targets.length;
+  })
+  // console.log(filtered);
+  return filtered.reduce( function(accumulator, value, idx) {
+    accumulator = accumulator + value;
+    return accumulator;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,8 +35,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
-};
+  let arr = input.reduce( function(accumulator, value) {
+    return accumulator.concat(value);
+  }, []);
+  return arr.reduce((accumulator, value) => accumulator + value, 0);
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
