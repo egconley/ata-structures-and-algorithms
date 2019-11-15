@@ -39,7 +39,7 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   for (let i = 0; i < times; i++) {
-    addValues(arr, num);
+    callback(arr, num);
   }
   return arr;
 };
@@ -65,7 +65,7 @@ const removeOne = (num, arr) => {
 
 const removeElements = (arr, callback) => {
   for (let i = 0; i < arr.length; i++) {
-    removeOne(arr[i], arr);
+    callback(arr[i], arr);
     // console.log(i, arr);
   }
   return arr;
