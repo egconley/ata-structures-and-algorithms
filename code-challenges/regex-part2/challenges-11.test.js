@@ -9,7 +9,12 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  // Solution code here...
+  let regex = /[A-Za-z]/;
+  if (pin.toString().length === 4 && regex.test(pin) === false) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,8 +59,23 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let extractNumeric = phoneNumber.replace(" ", "").replace(" ", "").replace("(", "").replace(")", "").replace("-", "").replace("-", "");
+  let regex1 = /\([0-9][0-9][0-9]\)\s[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]/;
+  let regex2 = /\([0-9][0-9][0-9]\)[0-9][0-9][0-9]\s[0-9][0-9][0-9][0-9]/;
+  let regex3 = /[0-9][0-9][0-9]\s[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]/;
+  let regex4 = /[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+  let regex5 = /[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]/;
+  let regex6 = /[0-9][0-9][0-9]\s[0-9][0-9][0-9]\s[0-9][0-9][0-9][0-9]/;
+  let regex7 = /[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]/;
+  let regex8 = /[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+  let regex9 = /[0-9][0-9][0-9]\s[0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+  if ((regex1.test(phoneNumber)===true || regex2.test(phoneNumber)===true ||regex3.test(phoneNumber)===true ||regex4.test(phoneNumber)===true ||regex5.test(phoneNumber)===true ||regex6.test(phoneNumber)===true ||regex7.test(phoneNumber)===true ||regex8.test(phoneNumber)===true || regex9.test(phoneNumber)===true) && extractNumeric.length===10) {
+    return true;
+  } else {
+    return false;
+  }
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4 - Stretch Goal
