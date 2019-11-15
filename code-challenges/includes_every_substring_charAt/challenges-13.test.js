@@ -71,7 +71,19 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let newArray = [];
+  arr.forEach(item => {
+    if (item.includes(':)')) {
+      newArray.push(true);
+    } else {
+      newArray.push(false);
+    }
+  })
+  if (newArray.includes(false)) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,7 +93,13 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  let newArray = [];
+  arr.forEach(item => {
+    if (item.includes(target)) {
+      newArray.push(item);
+    }
+  })
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +109,19 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  let newArray = [];
+  arr.forEach(item => {
+    if (item.includes(target)) {
+      newArray.push(true);
+    } else {
+      newArray.push(false);
+    }
+  })
+  if (newArray.includes(false)) {
+    return false
+  } else {
+    return true;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +164,25 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (arr) => {
-  // Solution code here...
+  let newArray = [[], [], [], [], [], [], []];
+  for (let i=0; i<arr.length; i++) {
+    if (arr[i].includes('Monday')) {
+      newArray[0].push(arr[i]);
+    } if (arr[i].includes('Tuesday')) {
+      newArray[1].push(arr[i]);
+    } if (arr[i].includes('Wednesday')) {
+      newArray[2].push(arr[i]);
+    } if (arr[i].includes('Thursday')) {
+      newArray[3].push(arr[i]);
+    } if (arr[i].includes('Friday')) {
+      newArray[4].push(arr[i]);
+    } if (arr[i].includes('Saturday')) {
+      newArray[5].push(arr[i]);
+    } if (arr[i].includes('Sunday')) {
+      newArray[6].push(arr[i]);
+    }
+  }
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
