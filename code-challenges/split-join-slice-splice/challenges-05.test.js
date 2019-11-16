@@ -15,7 +15,7 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for (let i=0; i<str.length+1; i++) {
+  for (let i = 0; i < str.length + 1; i++) {
     result[i] = str.slice(i);
   }
   return result;
@@ -31,8 +31,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   let result = [];
-  for (let i=0; i<arr.length; i++) {
-    result[i] = arr.slice(i, i+1);
+  for (let i = 0; i < arr.length; i++) {
+    result[i] = arr.slice(i, i + 1);
   }
   return result;
 };
@@ -129,8 +129,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  for (let i=0; i<arr.length; i++) {
-    if (arr[i]%2===0) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
       arr.splice(i, 1);
     }
   }
@@ -153,7 +153,11 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if (str.length > numberOfCharacters) {
+    return str.slice(0, (str.length - numberOfCharacters));
+  } else {
+    return '';
+  }
 };
 
 
@@ -165,7 +169,16 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 
 const totalSumCSV = (str) => {
   let total = 0;
-  // Solution code here...
+  let arr = str.split(',');
+  let arrNum = arr.map(value => {
+    return parseInt(value);
+  })
+  // console.log(arrNum);
+  total = arrNum.reduce(function (acc, value) {
+    acc = acc + value;
+    // console.log(acc);
+    return acc;
+  })
   return total;
 };
 
@@ -179,7 +192,19 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+  let arr = str.split('');
+  let regex = /[a]|[e]|[i]|[o]|[u]/i;
+  // console.log(arr);
+  let noVowels = arr.map(value => {
+    if (regex.test(value) === false) {
+      return value;
+    } else {
+      return '';
+    }
+  })
+  // console.log(noVowels);
+  let squished = noVowels.join('');
+  return squished;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -193,7 +218,32 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
-  // Solution code here...
+  let arr = str.split('');
+  let regex = /[a]|[e]|[i]|[o]|[u]/i;
+  let vowels = [];
+  // console.log(arr);
+  let noVowels = arr.map((value, idx) => {
+    if (regex.test(value) === false) {
+      return value;
+    } else {
+      vowels.push(value);
+      return '';
+    }
+  })
+  let vowelsSorted = vowels.sort((a, b) => {
+    if (a < b) {
+      return -1;
+    } else if (a > b) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  // console.log(vowelsSorted);
+  let noVowelsSquished = noVowels.join('');
+  let vowelsSquished = vowelsSorted.join('');
+  // console.log(vowelsSquished);
+  return [noVowelsSquished, vowelsSquished];
 };
 
 /* ------------------------------------------------------------------------------------------------
