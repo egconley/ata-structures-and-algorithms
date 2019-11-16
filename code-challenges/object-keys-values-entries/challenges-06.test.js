@@ -93,10 +93,24 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  // let names = [];
+  for (let i=0; i<arr.length; i++) {
+    // console.log('character: ', character);
+    // console.log(arr[i].name)
+    if (arr[i].name===character || arr[i].spouse===character) {
+      // names.push(arr[i].name, arr[i].spouse);
+      // console.log(names);
+      if (Object.values(characters[i].children)=== []) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
+  if (!(arr.includes(character))) {
+    return false;
+  }
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -106,7 +120,23 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let childCount = 0;
+  for (let i=0; i<arr.length; i++) {
+    // console.log('character: ', character);
+    if (arr[i].name===character || arr[i].spouse===character) {
+      // console.log(arr[i].name)
+      if (Object.values(characters[i].children)===[]) {
+        // console.log('bad', arr[i].name)
+        childCount===0;
+      } else {
+        // console.log('good', arr[i].name)
+        childCount+=characters[i].children.length;
+        // console.log('length', characters[i].children.length)
+        // console.log('count, ', childCount)
+      }
+    }
+  }
+  return childCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +146,21 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let charNames = [];
+  for (let i=0; i<arr.length; i++) {
+    if (arr[i].name !== null) {
+      charNames.push(arr[i].name);
+    }
+    if (arr[i].spouse !== null) {
+      charNames.push(arr[i].spouse);
+    }
+    if (arr[i].children !== []) {
+      for (let j=0; j<arr[i].children.length; j++) {
+        charNames.push(arr[i].children[j]);
+      }
+    }
+  }
+  return charNames.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
