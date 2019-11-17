@@ -34,7 +34,13 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  let regex = /[A-Za-z]([0-9])?(.[A-Za-z]?[0-9])?@[A-Za-z].(net)?(com)?(org)?/;
+  let noColon = /:/
+  if (regex.test(email)===true && noColon.test(email)===false) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
