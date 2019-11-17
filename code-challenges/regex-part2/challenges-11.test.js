@@ -34,7 +34,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  let regex = /[A-Za-z]([0-9])?(.[A-Za-z]?[0-9])?@[A-Za-z].(net)?(com)?(org)?/;
+  let regex = /[A-Za-z]([0-9])?(.[A-Za-z]?[0-9])?@[A-Za-z]+(.net|.com|.org)$/;
   let noColon = /:/
   if (regex.test(email)===true && noColon.test(email)===false) {
     return true;
@@ -93,8 +93,22 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 ------------------------------------------------------------------------------------------------ */
 
 const findTagNames = elements => {
-  // Solution code here...
+  let newArray = [];
+  let regex = /^\//;
+  console.log(elements);
+  for (let i=0; i<elements.length; i++) {
+    let splitArray = elements[i].split('<');
+    for (let j=0; j<splitArray.length;j++) {
+      if (regex.test(splitArray[j])===true) {
+        let finalItem = splitArray[j].replace('>', '')
+        // console.log('on track');
+        newArray.push(finalItem);
+      }
+    }
+  }
+  return newArray;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
