@@ -72,7 +72,17 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  for (let i=0; i<arr.length; i++) {
+    // console.log(arr[i].items);
+    for (let j=0; j<arr[i].items.length; j++) {
+      // console.log(j, ': ', arr[i].items[j]);
+      if (arr[i].items[j].name === 'Treats') {
+        // console.log('you did itttttt');
+        return arr[i].items[j].quantity;
+        // return arr[i][j].quantity;
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
