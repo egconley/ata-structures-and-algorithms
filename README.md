@@ -18,7 +18,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![](./code401challenges/assets/code401challenge01.jpeg)
+![](./code401challenges/src/main/java/code401challenges/assets/code401challenge01.jpeg)
 
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/35)
 * [submission PR 2](https://github.com/egconley/data-structures-and-algorithms/pull/35)
@@ -39,7 +39,7 @@ Write a function called insertShiftArray which takes in an array and the value t
   - if the input array is an odd-length array, insert value from old array at i, AND insert the input value at i+1.  At indexes greater than i+1, insert values from input array[i-1]
     
 ## Solution
-![](./code401challenges/assets/code401challenge02.jpg)
+![](./code401challenges/src/main/java/code401challenges/assets/code401challenge02.jpg)
 
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/39)
 
