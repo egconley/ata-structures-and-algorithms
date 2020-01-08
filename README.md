@@ -15,7 +15,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Reverse an array.
 
 ## Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/code401challenge01.jpeg)
@@ -26,7 +26,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 ### Code Challenge 02
 
 # Challenge Summary
-<!-- Short summary or background information -->
+Insert and shift an array in middle at index
 
 ## Challenge Description
 Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
