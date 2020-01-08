@@ -8,33 +8,60 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 
 ### Code Challenge 01
 
-#### Whiteboard
+# Challenge Summary
+<!-- Short summary or background information -->
+
+## Challenge Description
+Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
 ![](./code401challenges/assets/code401challenge01.jpeg)
 
-#### Links and Resources
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/35)
 * [submission PR 2](https://github.com/egconley/data-structures-and-algorithms/pull/35)
 
-## Code 301 Challenges
+### Code Challenge 02
 
-#### Links and Resources
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+# Challenge Summary
+<!-- Short summary or background information -->
 
-#### Setup
+## Challenge Description
+Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
 
-##### `.env` requirements
-* `PORT` - Port Number
-* `DATABASE_URL` - URL to the running mongo instance/db
-* any environment variables like api keys as needed
+## Approach & Efficiency
 
-##### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+1. Create a new int array of length +1
+2. Loop over new int array, inserting values from input array until i is half the length of the input array.
+  - if the input array is an even-length array, insert input value at i.  Continue inserting values from input array[i-1] at i of new array.
+  - if the input array is an odd-length array, insert value from old array at i, AND insert the input value at i+1.  At indexes greater than i+1, insert values from input array[i-1]
+    
+## Solution
+![](./code401challenges/assets/code401challenge02.jpg)
 
-#### Reflections and Comments
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+* [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/39)
+
+```
+    public static int[] insertShiftArray(int[] array, int value) {
+        int[] newArray = new int[array.length +1];
+
+        for (int i=0; i < newArray.length; i++) {
+            if ( i < (array.length/2) ) {
+                newArray[i] = array[i];
+            } else if (i == (int) Math.ceil(array.length/2) && array.length %2 == 0) {
+                newArray[i] = value;
+            } else if (i == (int) Math.ceil(array.length/2) && array.length %2 != 0) {
+                newArray[i] = array[i];
+                newArray[i+1] = value;
+            } else if (i > array.length/2 && array.length %2 == 0) {
+                newArray[i] = array[i-1];
+            } else if (i > (array.length/2 + 1) && array.length %2 != 0) {
+                newArray[i] = array[i-1];
+            }
+        }
+        System.out.println("newArray: " + Arrays.toString(newArray) );
+        return newArray;
+    }
+```
