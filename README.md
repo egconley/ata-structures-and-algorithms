@@ -4,18 +4,23 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 
 ### Author: Ellen Conley
 
+## Table of Contents
+- Code Challenge 01: Reverse an array
+- Code Challenge 02: Insert and shift an array in middle at index
+- Code Challenge 03: Binary search in a sorted 1D array
+
 ## Code 401 Challenges
 
 ### Code Challenge 01
 
 # Challenge Summary
-<!-- Short summary or background information -->
+Reverse an array.
 
 ## Challenge Description
 Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
 ## Approach & Efficiency
-Reverse an array.
+
 
 ## Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/code401challenge01.jpeg)
@@ -65,3 +70,20 @@ Write a function called insertShiftArray which takes in an array and the value t
         return newArray;
     }
 ```
+
+### Code Challenge 03
+
+# Challenge Summary
+Binary search in a sorted 1D array
+
+## Challenge Description
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+## Approach & Efficiency
+
+...will come back and update!
+    
+## Solution
+![](./code401challenges/src/main/java/code401challenges/assets/array-binary-search.jpg)
+
+* [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/41)
