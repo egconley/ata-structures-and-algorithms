@@ -103,6 +103,8 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
    - check if the target value *is less than* the value at the midpoint.
    - *if so,* set the end search variable to the current midpoint index and find the new midpoint
  8. Return target index variable
+ 
+ **Efficiency: O(log n)**
     
 ### Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/array-binary-search.jpg)
