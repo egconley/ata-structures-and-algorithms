@@ -5,12 +5,10 @@ import java.util.Arrays;
 public class BinarySearch {
     public static void main(String[] args) {
 
-        int[] testArray = new int[] {1,2,3,4,5,6,7,8,9,10,11,12};
-        int testValue = 145;
+        //int[] testArray = new int[] {1,2,3,4,5,6,7,8,9,10,11,12};
+        //int testValue = 145;
 
-        binarySearch(testArray, testValue);
-
-        // breaks is testValue == 6, 7
+        //binarySearch(testArray, testValue);
     }
 
     public static int binarySearch(int[] array, int value) {
