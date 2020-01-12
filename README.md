@@ -12,6 +12,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 ## Code 401 Challenges
 
 ### Code Challenge 01
+[link to code]()
 
 # Challenge Summary
 Reverse an array.
@@ -29,6 +30,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 * [submission PR 2](https://github.com/egconley/data-structures-and-algorithms/pull/35)
 
 ### Code Challenge 02
+[link to code]()
 
 # Challenge Summary
 Insert and shift an array in middle at index
@@ -72,6 +74,7 @@ Write a function called insertShiftArray which takes in an array and the value t
 ```
 
 ### Code Challenge 03
+[link to code]()
 
 # Challenge Summary
 Binary search in a sorted 1D array
@@ -81,13 +84,31 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ## Approach & Efficiency
 
-...will come back and update!
+1. Declare a method binarySearch() that takes in an int array and an integer (target value).
+2. Declare index to begin search and ininitialize as 0.
+3. Declare index to end search and initialize as last index of input array.
+4. Declare midpoint index and initialize as the sum of (#1 and #2), divided by 2.
+5. Declare target index variable and initialize at -1.
+6. Declare boolean variable to indicate whether the target value has been found.
+7. Loop over input array while boolean foundTarget is false;
+   - check if the target value can be found in the following places
+      * the midpoint
+      * the first index
+      * the last index
+      * *if so,* foundTarget gets set to the index at that location, and the method returns that index.
+   - check if the target value is *less than* the value at the first index or *greater than* the value at the last index
+   - *if so,* break out of while loop and return -1.
+   - check if the target value *is greater than* the value at the midpoint.
+   - *if so,* set the begin search variable to the current midpoint index and find the new midpoint
+   - check if the target value *is less than* the value at the midpoint.
+   - *if so,* set the end search variable to the current midpoint index and find the new midpoint
+ 8. Return target index variable
     
 ## Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/array-binary-search.jpg)
 
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/41)
-* [resubmission PR]()
+* [resubmission PR](https://github.com/egconley/data-structures-and-algorithms/pull/42)
 
 ```
     public static int binarySearch(int[] array, int value) {
