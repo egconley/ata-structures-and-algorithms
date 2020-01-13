@@ -175,4 +175,5 @@ Implement a singly-linked list
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/43)
 
-
+### Resources
+[Absolute Java, by Walter Savitch - Chapter 15](https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf)
