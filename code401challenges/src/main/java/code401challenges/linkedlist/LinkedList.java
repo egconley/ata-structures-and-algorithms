@@ -10,6 +10,7 @@ public class LinkedList {
         list.insert("Bananas", 2);
         list.insert("Cantaloupe", 3);
         System.out.println(list.toString());
+        System.out.println(list.size());
     }
 
     private Node head;

@@ -53,12 +53,10 @@ public class LinkedListTest {
         test4.insert("Bananas", 2);
         test4.insert("Cantaloupe", 3);
 
-        // insert() puts new item at the head, so if the head points to the first node,
-        // new items get added to the front of the list.
-        String expected = "{ Cantaloupe } -> { Bananas } -> { Apples } -> NULL";
-        String actual = test4.toString();
+        int expectedSize = 3;
+        int actualSize = test4.size();
 
-        assertEquals(expected, actual);
+        assertEquals(expectedSize, actualSize);
     }
 
     @Test
@@ -70,5 +68,32 @@ public class LinkedListTest {
         test5.insert("Cantaloupe", 3);
 
         assertTrue(test5.includes("Bananas"));
+    }
+
+    @Test
+    public void test_LinkedList_NotFoundValueReturnsFalse() {
+        LinkedList test6 = new LinkedList();
+
+        test6.insert("Apples", 1);
+        test6.insert("Bananas", 2);
+        test6.insert("Cantaloupe", 3);
+
+        assertFalse(test6.includes("Peaches"));
+    }
+
+    @Test
+    public void test_LinkedList_returnCollectionOfValues() {
+        LinkedList test4 = new LinkedList();
+
+        test4.insert("Apples", 1);
+        test4.insert("Bananas", 2);
+        test4.insert("Cantaloupe", 3);
+
+        // insert() puts new item at the head, so if the head points to the first node,
+        // new items get added to the front of the list.
+        String expected = "{ Cantaloupe } -> { Bananas } -> { Apples } -> NULL";
+        String actual = test4.toString();
+
+        assertEquals(expected, actual);
     }
 }
