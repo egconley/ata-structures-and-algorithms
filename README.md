@@ -184,14 +184,55 @@ Implement a singly-linked list
 [link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist)
 
 ### Challenge Summary
-.append(value) which adds a new node with the given value to the end of the list
-.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+- .append(value) which adds a new node with the given value to the end of the list
+- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
   
 ### Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/ll-insertions.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/44)
+
+```
+    public void append(String itemName, int itemCount) {
+        Node newNode = new Node(itemName, itemCount, null);
+        Node position = head;
+        while (position.getLink() != null) {
+            position = position.getLink();
+        }
+        position.setLink(newNode);
+    }
+
+    public void insertAfter(String item, int newItemCount, String newItemName) {
+        Node newNode = new Node(newItemName, newItemCount, null);
+        Node position = head;
+        String itemAtPosition;
+        Node nextNode = position.getLink();
+        while(!position.getItem().equals(item)) {
+            itemAtPosition = position.getItem();
+            position = position.getLink();
+            itemAtPosition = position.getItem();
+            nextNode = position.getLink();
+        }
+        position.setLink(newNode);
+        newNode.setLink(nextNode);
+    }
+
+    public void insertBefore(String item, int newItemCount, String newItemName) {
+        Node newNode = new Node(newItemName, newItemCount, null);
+        Node position = head;
+        String itemAtPosition;
+        Node nextNode = position.getLink();
+        while(!nextNode.getItem().equals(item)) {
+            itemAtPosition = position.getItem();
+            position = position.getLink();
+            itemAtPosition = position.getItem();
+            nextNode = position.getLink();
+        }
+        position.setLink(newNode);
+        newNode.setLink(nextNode);
+    }
+```
 
 ### Resources
 [Absolute Java, by Walter Savitch - Chapter 15](https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf)
