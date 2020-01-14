@@ -16,6 +16,7 @@ public class Node {
     public Node(String newItem, int newCount, Node linkValue) {
         setData(newItem, newCount);
         link = linkValue;
+        //System.out.println("link = " + link + ", item = " + item);
     }
 
     public void setData(String newItem, int newCount) {
@@ -38,4 +39,9 @@ public class Node {
     public Node getLink() {
         return link;
     }
+
+    // fix to match your code
+//    public String toString() {
+//        return item + " -> " + (this.nextNode == null ? "NULL" : this.nextNode.toString());
+//    }
 }

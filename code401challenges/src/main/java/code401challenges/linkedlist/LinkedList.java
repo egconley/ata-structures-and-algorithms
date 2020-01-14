@@ -9,8 +9,12 @@ public class LinkedList {
         list.insert("Apples", 1);
         list.insert("Bananas", 2);
         list.insert("Cantaloupe", 3);
+
+        //System.out.println(list.size());
+
+        list.append("Mangosteen", 3);
+        list.insertBefore("Bananas", 4, "Oranges");
         System.out.println(list.toString());
-        System.out.println(list.size());
     }
 
     private Node head;
@@ -23,6 +27,38 @@ public class LinkedList {
     // and adds a new node with that value to the head of the list with an O(1) Time performance.
     public void insert(String itemName, int itemCount) {
         head = new Node(itemName, itemCount, head);
+    }
+
+    // appends new node to end of list
+    public void append(String itemName, int itemCount) {
+        Node newNode = new Node(itemName, itemCount, null);
+        Node position = head;
+        //String itemAtPosition;
+        while (position.getLink() != null) {
+            //itemAtPosition = position.getItem();
+            position = position.getLink();
+            //System.out.println("ItemAtPosition: " + itemAtPosition);
+        }
+        position.setLink(newNode);
+    }
+
+    public void insertAfter(String item, int newItemCount, String newItemName) {
+        Node newNode = new Node(newItemName, newItemCount, null);
+        Node position = head;
+        String itemAtPosition;
+        Node nextNode = position.getLink();
+        while(!position.getItem().equals(item)) {
+            itemAtPosition = position.getItem();
+            //System.out.println("itemAtPosition 1 = " + itemAtPosition);
+            //System.out.println("nextNode 1 = " + nextNode.getItem());
+            position = position.getLink();
+            itemAtPosition = position.getItem();
+            nextNode = position.getLink();
+            //System.out.println("itemAtPosition 2 = " + itemAtPosition);
+            //System.out.println("nextNode 2 = " + nextNode.getItem());
+        }
+        position.setLink(newNode);
+        newNode.setLink(nextNode);
     }
 
     // removes head and returns true if the list contained at least one node.  Returns false if the list was empty
@@ -69,19 +105,20 @@ public class LinkedList {
     // Define a method called toString (or __str__ in Python) which takes in no arguments
     // and returns a string representing all the values in the Linked List, formatted as:
     // "{ a } -> { b } -> { c } -> NULL"
+
+    // update this to match with new toString() method
     public String toString() {
         Node position = head;
         String LinkedListString = "";
         while (position != null) {
             //String itemAsString = "{ " + position.getItem() + ", " + position.getCount() + " }";
+            //could use .append (string builder)
             String itemAsString = "{ " + position.getItem() + " }";
             LinkedListString += itemAsString + " -> ";
 
             position = position.getLink();
         }
-        if (position == null) {
-            LinkedListString += "NULL";
-        }
+        LinkedListString += "NULL";
         return LinkedListString;
     }
 }
