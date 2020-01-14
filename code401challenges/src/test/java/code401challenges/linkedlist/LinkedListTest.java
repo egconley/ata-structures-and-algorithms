@@ -2,6 +2,7 @@ package code401challenges.linkedlist;
 
 import code401challenges.ArrayShift;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -83,16 +84,66 @@ public class LinkedListTest {
 
     @Test
     public void test_LinkedList_returnCollectionOfValues() {
-        LinkedList test4 = new LinkedList();
+        LinkedList test7 = new LinkedList();
 
-        test4.insert("Apples", 1);
-        test4.insert("Bananas", 2);
-        test4.insert("Cantaloupe", 3);
+        test7.insert("Apples", 1);
+        test7.insert("Bananas", 2);
+        test7.insert("Cantaloupe", 3);
 
         // insert() puts new item at the head, so if the head points to the first node,
         // new items get added to the front of the list.
         String expected = "{ Cantaloupe } -> { Bananas } -> { Apples } -> NULL";
-        String actual = test4.toString();
+        String actual = test7.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_LinkedList_append() {
+        LinkedList test8 = new LinkedList();
+
+        test8.insert("Apples", 1);
+        test8.insert("Bananas", 2);
+        test8.insert("Cantaloupe", 3);
+
+        test8.append("Mangosteen", 4);
+
+        String expected = "{ Cantaloupe } -> { Bananas } -> { Apples } -> { Mangosteen } -> NULL";
+        String actual =  test8.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_LinkedList_insertBefore() {
+        LinkedList test8 = new LinkedList();
+
+        test8.insert("Apples", 1);
+        test8.insert("Bananas", 2);
+        test8.insert("Cantaloupe", 3);
+        test8.insert("Peaches", 4);
+
+        test8.insertBefore("Bananas", 5, "Mangosteen");
+
+        String expected = "{ Peaches } -> { Cantaloupe } -> { Mangosteen } -> { Bananas } -> { Apples } -> NULL";
+        String actual =  test8.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void test_LinkedList_insertAfter() {
+        LinkedList test8 = new LinkedList();
+
+        test8.insert("Apples", 1);
+        test8.insert("Bananas", 2);
+        test8.insert("Cantaloupe", 3);
+        test8.insert("Peaches", 4);
+
+        test8.insertAfter("Bananas", 5, "Mangosteen");
+
+        String expected = "{ Peaches } -> { Cantaloupe } -> { Bananas } -> { Mangosteen } -> { Apples } -> NULL";
+        String actual =  test8.toString();
 
         assertEquals(expected, actual);
     }
