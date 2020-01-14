@@ -115,6 +115,18 @@ public class LinkedListTest {
     }
 
     @Test
+    public void test_LinkedList_appendToNULL() {
+        LinkedList test8b = new LinkedList();
+
+        test8b.append("Mangosteen", 4);
+
+        String expected = "{ Mangosteen } -> NULL";
+        String actual =  test8b.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void test_LinkedList_insertBefore() {
         LinkedList test8 = new LinkedList();
 
