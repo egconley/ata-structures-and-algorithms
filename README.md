@@ -189,6 +189,7 @@ Implement a singly-linked list
 .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
   
 ### Solution
+![](./code401challenges/src/main/java/code401challenges/assets/ll-insertions.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/44)
 
