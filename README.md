@@ -197,10 +197,17 @@ Implement a singly-linked list
     public void append(String itemName, int itemCount) {
         Node newNode = new Node(itemName, itemCount, null);
         Node position = head;
-        while (position.getLink() != null) {
-            position = position.getLink();
+        if (position == null) {
+            insert(itemName, itemCount);
+        } else {
+            String itemAtPosition;
+            while (position.getLink() != null) {
+                itemAtPosition = position.getItem();
+                position = position.getLink();
+                System.out.println("ItemAtPosition: " + itemAtPosition);
+            }
+            position.setLink(newNode);
         }
-        position.setLink(newNode);
     }
 
     public void insertAfter(String item, int newItemCount, String newItemName) {
