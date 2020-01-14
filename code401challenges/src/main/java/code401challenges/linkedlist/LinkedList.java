@@ -12,8 +12,9 @@ public class LinkedList {
 
         //System.out.println(list.size());
 
-        list.append("Mangosteen", 3);
-        list.insertBefore("Bananas", 4, "Oranges");
+        //list.append("Mangosteen", 3);
+        //list.insertAfter("Bananas", 4, "Oranges");
+        //list.insertBefore("Apples", 4, "Oranges");
         System.out.println(list.toString());
     }
 
@@ -48,6 +49,25 @@ public class LinkedList {
         String itemAtPosition;
         Node nextNode = position.getLink();
         while(!position.getItem().equals(item)) {
+            itemAtPosition = position.getItem();
+            //System.out.println("itemAtPosition 1 = " + itemAtPosition);
+            //System.out.println("nextNode 1 = " + nextNode.getItem());
+            position = position.getLink();
+            itemAtPosition = position.getItem();
+            nextNode = position.getLink();
+            //System.out.println("itemAtPosition 2 = " + itemAtPosition);
+            //System.out.println("nextNode 2 = " + nextNode.getItem());
+        }
+        position.setLink(newNode);
+        newNode.setLink(nextNode);
+    }
+
+    public void insertBefore(String item, int newItemCount, String newItemName) {
+        Node newNode = new Node(newItemName, newItemCount, null);
+        Node position = head;
+        String itemAtPosition;
+        Node nextNode = position.getLink();
+        while(!nextNode.getItem().equals(item)) {
             itemAtPosition = position.getItem();
             //System.out.println("itemAtPosition 1 = " + itemAtPosition);
             //System.out.println("nextNode 1 = " + nextNode.getItem());
