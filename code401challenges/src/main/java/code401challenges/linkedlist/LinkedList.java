@@ -6,13 +6,13 @@ public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        list.insert("Apples", 1);
-        list.insert("Bananas", 2);
-        list.insert("Cantaloupe", 3);
+//        list.insert("Apples", 1);
+//        list.insert("Bananas", 2);
+//        list.insert("Cantaloupe", 3);
 
         //System.out.println(list.size());
 
-        //list.append("Mangosteen", 3);
+        list.append("Mangosteen", 3);
         //list.insertAfter("Bananas", 4, "Oranges");
         //list.insertBefore("Apples", 4, "Oranges");
         System.out.println(list.toString());
@@ -34,13 +34,17 @@ public class LinkedList {
     public void append(String itemName, int itemCount) {
         Node newNode = new Node(itemName, itemCount, null);
         Node position = head;
-        //String itemAtPosition;
-        while (position.getLink() != null) {
-            //itemAtPosition = position.getItem();
-            position = position.getLink();
-            //System.out.println("ItemAtPosition: " + itemAtPosition);
+        if (position == null) {
+            insert(itemName, itemCount);
+        } else {
+            String itemAtPosition;
+            while (position.getLink() != null) {
+                itemAtPosition = position.getItem();
+                position = position.getLink();
+                System.out.println("ItemAtPosition: " + itemAtPosition);
+            }
+            position.setLink(newNode);
         }
-        position.setLink(newNode);
     }
 
     public void insertAfter(String item, int newItemCount, String newItemName) {
