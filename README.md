@@ -9,6 +9,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 02](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/ArrayShift.java): Insert and shift an array in middle at index
 - [Code Challenge 03](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java): Binary search in a sorted 1D array
 - [Code Challenge 04](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked List Implementation
+- [Code Challenge 06](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked list insertions.
 
 ## Code 401 Challenges
 
@@ -172,8 +173,24 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 Implement a singly-linked list
   
 ### Solution
+![](./code401challenges/src/main/java/code401challenges/assets/array-binary-search.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/43)
+
+### Resources
+[Absolute Java, by Walter Savitch - Chapter 15](https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf)
+
+## Code Challenge 06
+[link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist)
+
+### Challenge Summary
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+  
+### Solution
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/44)
 
 ### Resources
 [Absolute Java, by Walter Savitch - Chapter 15](https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf)
