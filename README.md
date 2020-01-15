@@ -9,7 +9,8 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 02](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/ArrayShift.java): Insert and shift an array in middle at index
 - [Code Challenge 03](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java): Binary search in a sorted 1D array
 - [Code Challenge 04](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked List Implementation
-- [Code Challenge 06](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked list insertions.
+- [Code Challenge 06](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked list insertions
+- [Code Challenge 07](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): k-th value from the end of a linked list
 
 ## Code 401 Challenges
 
@@ -243,3 +244,37 @@ Implement a singly-linked list
 
 ### Resources
 [Absolute Java, by Walter Savitch - Chapter 15](https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf)
+
+## Code Challenge 07
+[link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist)
+
+### Challenge Summary
+- method for the Linked List class which takes a number, k, as a parameter and returns the node’s value that is k from the end of the linked list. 
+  
+### Solution
+![](./code401challenges/src/main/java/code401challenges/assets/ll-kth-from-end.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/47)
+
+```
+    public String getKthFromEnd(int k) {
+        int size = 0;
+        Node position = head;
+        while (position != null) {
+            size++;
+            position = position.getLink();
+        }
+
+        if (k >= size || 0 > k) {
+            throw new IndexOutOfBoundsException();
+        } else {
+            int iterationsToTarget = size - k;
+            position = head;
+            while ( iterationsToTarget > 1 ) {
+                iterationsToTarget--;
+                position = position.getLink();
+            }
+        }
+        return position.getItem();
+    }
+```
