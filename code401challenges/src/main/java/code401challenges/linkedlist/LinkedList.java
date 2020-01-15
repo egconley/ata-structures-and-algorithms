@@ -2,20 +2,29 @@ package code401challenges.linkedlist;
 
 // source: https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf
 
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-//        list.insert("Apples", 1);
-//        list.insert("Bananas", 2);
-//        list.insert("Cantaloupe", 3);
+        list.insert("Apples", 1);
+        list.insert("Bananas", 2);
+        list.insert("Cantaloupe", 3);
+        list.insert("Mangosteen", 4);
+        list.insert("Oranges", 5);
+        list.insert("Pears", 6);
+
+        System.out.println(list.toString());
+
+        System.out.println(list.getKthFromEnd(4));
 
         //System.out.println(list.size());
 
-        list.append("Mangosteen", 3);
+        //list.append("Mangosteen", 3);
         //list.insertAfter("Bananas", 4, "Oranges");
         //list.insertBefore("Apples", 4, "Oranges");
-        System.out.println(list.toString());
+        //System.out.println(list.toString());
     }
 
     private Node head;
@@ -104,6 +113,32 @@ public class LinkedList {
             position = position.getLink();
         }
         return count;
+    }
+
+    // returns kth value from end of list
+    public String getKthFromEnd(int k) {
+        int size = 0;
+        Node position = head;
+        while (position != null) {
+            size++;
+            position = position.getLink();
+        }
+        //System.out.println("size = " + size);
+
+        if (k >= size || 0 > k) {
+            throw new IndexOutOfBoundsException();
+        } else {
+            int iterationsToTarget = size - k;
+            position = head;
+            while ( iterationsToTarget > 1 ) {
+                //System.out.println("position.getItem() = " + position.getItem());
+                //System.out.println("iterationsToTarget = " + iterationsToTarget);
+                iterationsToTarget--;
+                //System.out.println("iterationsToTarget = " + iterationsToTarget);
+                position = position.getLink();
+            }
+        }
+        return position.getItem();
     }
 
     // Define a method called includes which takes any value as an argument
