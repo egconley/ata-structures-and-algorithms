@@ -7,11 +7,11 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 ## Table of Contents
 - [Code Challenge 01](#code-challenge-01): Reverse an array
 - [Code Challenge 02](#code-challenge-02): Insert and shift an array in middle at index
-- [Code Challenge 03](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java): Binary search in a sorted 1D array
-- [Code Challenge 04](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked List Implementation
-- [Code Challenge 06](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked list insertions
-- [Code Challenge 07](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): k-th value from the end of a linked list
-- [Code Challenge 07](): Merge 2 linked lists.
+- [Code Challenge 03](#code-challenge-03): Binary search in a sorted 1D array
+- [Code Challenge 04](#code-challenge-04): Linked List Implementation
+- [Code Challenge 06](#code-challenge-05): Linked list insertions
+- [Code Challenge 07](#code-challenge-06): k-th value from the end of a linked list
+- [Code Challenge 07](#code-challenge-07): Merge 2 linked lists.
 
 ## Code 401 Challenges
 
