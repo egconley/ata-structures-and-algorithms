@@ -11,6 +11,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 04](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked List Implementation
 - [Code Challenge 06](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked list insertions
 - [Code Challenge 07](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): k-th value from the end of a linked list
+- [Code Challenge 07](): Merge 2 linked lists.
 
 ## Code 401 Challenges
 
