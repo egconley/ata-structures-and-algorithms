@@ -5,8 +5,8 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 ### Author: Ellen Conley
 
 ## Table of Contents
-- [Code Challenge 01](##-code-challenge-01): Reverse an array
-- [Code Challenge 02](##-code-challenge-02): Insert and shift an array in middle at index
+- [Code Challenge 01](#-code-challenge-01): Reverse an array
+- [Code Challenge 02](#-code-challenge-02): Insert and shift an array in middle at index
 - [Code Challenge 03](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java): Binary search in a sorted 1D array
 - [Code Challenge 04](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked List Implementation
 - [Code Challenge 06](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist): Linked list insertions
