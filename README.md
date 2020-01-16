@@ -278,3 +278,14 @@ Implement a singly-linked list
         return position.getItem();
     }
 ```
+## Code Challenge 08
+
+### Challenge Summary
+- Merge two linked lists. 
+  
+### Solution
+![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-pd-algo.jpg)
+![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-pseudo.jpg)
+![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-visual.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/48)
