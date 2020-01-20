@@ -8,7 +8,7 @@ public class QueueTest {
 
     @Test
     public void enqueue() {
-        Queue<String> testQueue = new Queue<String>();
+        Queue<String> testQueue = new Queue<>();
         testQueue.enqueue("a");
         testQueue.enqueue("b");
         testQueue.enqueue("c");
@@ -17,7 +17,7 @@ public class QueueTest {
 
     @Test
     public void dequeue() {
-        Queue<String> testQueue = new Queue<String>();
+        Queue<String> testQueue = new Queue<>();
         testQueue.enqueue("a");
         testQueue.enqueue("b");
         testQueue.enqueue("c");
@@ -26,13 +26,13 @@ public class QueueTest {
 
     @Test (expected = NullPointerException.class)
     public void dequeue_exception() {
-        Queue<String> testQueue = new Queue<String>();
+        Queue<String> testQueue = new Queue<>();
         testQueue.dequeue();
     }
 
     @Test
     public void peek() {
-        Queue<String> testQueue = new Queue<String>();
+        Queue<String> testQueue = new Queue<>();
         testQueue.enqueue("a");
         testQueue.enqueue("b");
         testQueue.enqueue("c");
@@ -41,13 +41,13 @@ public class QueueTest {
 
     @Test (expected = NullPointerException.class)
     public void peek_exception() {
-        Queue<String> testQueue = new Queue<String>();
+        Queue<String> testQueue = new Queue<>();
         testQueue.peek();
     }
 
     @Test
     public void isEmpty() {
-        Queue<String> testQueue = new Queue<String>();
+        Queue<String> testQueue = new Queue<>();
         assertTrue(testQueue.isEmpty());
         testQueue.enqueue("a");
         assertFalse(testQueue.isEmpty());
