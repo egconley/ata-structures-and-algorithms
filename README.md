@@ -9,9 +9,10 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 02](#code-challenge-02): Insert and shift an array in middle at index
 - [Code Challenge 03](#code-challenge-03): Binary search in a sorted 1D array
 - [Code Challenge 04](#code-challenge-04): Linked List Implementation
-- [Code Challenge 06](#code-challenge-05): Linked list insertions
-- [Code Challenge 07](#code-challenge-06): k-th value from the end of a linked list
-- [Code Challenge 07](#code-challenge-07): Merge 2 linked lists.
+- [Code Challenge 06](#code-challenge-06): Linked list insertions
+- [Code Challenge 07](#code-challenge-07): k-th value from the end of a linked list
+- [Code Challenge 08](#code-challenge-08): Merge 2 linked lists
+- [Code Challenge 10](#code-challenge-10): Stacks and Queues
 
 ## Code 401 Challenges
 
@@ -290,3 +291,13 @@ Implement a singly-linked list
 ![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-visual.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/48)
+
+## Code Challenge 10
+
+### Challenge Summary
+- Implement and Stack and Queue from scratch.
+  
+### Solution
+[link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/stacksandqueues)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/49)
