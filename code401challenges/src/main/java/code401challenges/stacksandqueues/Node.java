@@ -1,29 +1,29 @@
 package code401challenges.stacksandqueues;
 
-public class Node {
+public class Node<T> {
 
-    public String item;
-    public Node next;
+    public T item;
+    public Node<T> next;
 
     public Node() {
         next = null;
         item = null;
     }
 
-    public Node(String newItem, Node nextNode) {
+    public Node(T newItem, Node<T> nextNode) {
         item = newItem;
         next = nextNode;
     }
 
-    public String getCurrent() {
+    public T getCurrent() {
         return item;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node newNext) {
+    public void setNext(Node<T> newNext) {
         next = newNext;
     }
 

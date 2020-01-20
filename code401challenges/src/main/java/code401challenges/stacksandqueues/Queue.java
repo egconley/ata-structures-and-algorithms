@@ -1,28 +1,28 @@
 package code401challenges.stacksandqueues;
 
-public class Queue {
+public class Queue<T> {
 
-    Node front;
-    Node back;
+    Node<T> front;
+    Node<T> back;
 
     public Queue() {
         front = null;
         back = null;
     }
 
-    public void enqueue(String value) {
-        Node newNode = new Node(value, null);
+    public void enqueue(T value) {
+        Node<T> newNode = new Node<T>(value, null);
         if (back == null) {
             front = newNode;
             back = front;
         } else {
-            back.setNext(new Node(value, null));
+            back.setNext(new Node<T>(value, null));
             back = back.next;
         }
     }
 
-    public String dequeue() {
-        String dequeued = null;
+    public T dequeue() {
+        T dequeued = null;
         if (front == null) {
             throw new NullPointerException();
         } else {
@@ -32,7 +32,7 @@ public class Queue {
         return dequeued;
     }
 
-    public String peek() {
+    public T peek() {
         if (front == null) {
             throw new NullPointerException();
         } else {
@@ -45,7 +45,7 @@ public class Queue {
     }
 
     public String toString() {
-        Node position = front;
+        Node<T> position = front;
         String StackString = "";
         while (position != null) {
 
