@@ -13,6 +13,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 07](#code-challenge-07): k-th value from the end of a linked list
 - [Code Challenge 08](#code-challenge-08): Merge 2 linked lists
 - [Code Challenge 10](#code-challenge-10): Stacks and Queues
+- [Code Challenge 11](#code-challenge-11): Implement a Queue using two Stacks
 
 ## Code 401 Challenges
 
@@ -301,3 +302,36 @@ Implement a singly-linked list
 [link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/stacksandqueues)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/49)
+
+## Code Challenge 11
+
+### Challenge Summary
+- Implement a Queue using two Stacks.
+  
+### Solution
+![](./code401challenges/src/main/java/code401challenges/assets/)
+
+```
+public class PseudoQueue<T> {
+
+    Stack<T> front = new Stack<>();
+    Stack<T>  back = new Stack<>();
+
+    T value;
+
+    public void enqueue(T value) {
+        back.push(value);
+    }
+
+    public T dequeue() {
+        while (!back.toString().equals("NULL")) {
+            front.push(back.pop());
+        }
+        //System.out.println(front.pop());
+        return front.pop();
+    }
+}
+```
+
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/52)
