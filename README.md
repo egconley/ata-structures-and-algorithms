@@ -285,6 +285,30 @@ Implement a singly-linked list
 
 ### Challenge Summary
 - Merge two linked lists. 
+
+### Approach & Efficiency
+
+1. Declare a method binarySearch() that takes in an int array and an integer (target value).
+2. Declare index to begin search and ininitialize as 0.
+3. Declare index to end search and initialize as last index of input array.
+4. Declare midpoint index and initialize as the sum of (#1 and #2), divided by 2.
+5. Declare target index variable and initialize at -1.
+6. Declare boolean variable to indicate whether the target value has been found.
+7. Loop over input array while boolean foundTarget is false;
+   - check if the target value can be found in the following places
+      * the midpoint
+      * the first index
+      * the last index
+      * *if so,* foundTarget gets set to the index at that location, and the method returns that index.
+   - check if the target value is *less than* the value at the first index or *greater than* the value at the last index
+   - *if so,* break out of while loop and return -1.
+   - check if the target value *is greater than* the value at the midpoint.
+   - *if so,* set the begin search variable to the current midpoint index and find the new midpoint
+   - check if the target value *is less than* the value at the midpoint.
+   - *if so,* set the end search variable to the current midpoint index and find the new midpoint
+ 8. Return target index variable
+ 
+ **Efficiency: O(log n)**
   
 ### Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-pd-algo.jpg)
@@ -307,6 +331,20 @@ Implement a singly-linked list
 
 ### Challenge Summary
 - Implement a Queue using two Stacks.
+
+### Approach & Efficiency
+
+1. Declare a Stack called front.
+2. Declare a Stack called back.
+3. Enqueue method: 
+    1. Take in a value parameter
+    2. Use the push method to add the value to the Stack called "back"
+4. Dequeue method:
+    1. while back.peek() is not null:
+        - pop values off of "back" and push them onto "front"
+    2. once back.peek() is null, pop top value off of "front" and return it.
+ 
+ **Efficiency: O(n)**
   
 ### Solution
 ![](./code401challenges/src/main/java/code401challenges/assets/)
