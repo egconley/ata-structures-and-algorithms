@@ -347,7 +347,10 @@ Implement a singly-linked list
  **Efficiency: O(n)**
   
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/)
+
+[link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/stacksandqueues)
+
+![](./code401challenges/src/main/java/code401challenges/assets/queue-with-stacks.jpg)
 
 ```
 public class PseudoQueue<T> {
@@ -370,6 +373,5 @@ public class PseudoQueue<T> {
     }
 }
 ```
-
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/52)
