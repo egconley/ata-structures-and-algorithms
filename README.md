@@ -14,7 +14,8 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 08](#code-challenge-08): Merge 2 linked lists
 - [Code Challenge 10](#code-challenge-10): Stacks and Queues
 - [Code Challenge 11](#code-challenge-11): Implement a Queue using two Stacks
-- [Code Challenge 13](#code-challenge-13): Multi-bracket Validation.
+- [Code Challenge 12](#code-challenge-12): FIFO animal shelter
+- [Code Challenge 13](#code-challenge-13): Multi-bracket Validation
 
 ## Code 401 Challenges
 
@@ -384,7 +385,7 @@ First-in, First out Animal Shelter.
 
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/fifo-animal-shelter.HEIC)
+![](./code401challenges/src/main/java/code401challenges/assets/fifo-animal-shelter.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/54)
 
@@ -395,6 +396,6 @@ Multi-bracket Validation.
 
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/multi-bracket-validation.HEIC)
+![](./code401challenges/src/main/java/code401challenges/assets/multi-bracket-validation.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/55)
