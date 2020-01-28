@@ -401,7 +401,7 @@ Multi-bracket Validation.
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/55)
 
-## Code Challenge 13
+## Code Challenge 15
 
 ### Challenge Summary
 Binary Tree and BST Implementation
