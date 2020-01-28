@@ -16,6 +16,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 11](#code-challenge-11): Implement a Queue using two Stacks
 - [Code Challenge 12](#code-challenge-12): FIFO animal shelter
 - [Code Challenge 13](#code-challenge-13): Multi-bracket Validation
+- [Code Challenge 15](#code-challenge-15): Trees Implementation
 
 ## Code 401 Challenges
 
@@ -399,3 +400,13 @@ Multi-bracket Validation.
 ![](./code401challenges/src/main/java/code401challenges/assets/multi-bracket-validation.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/55)
+
+## Code Challenge 13
+
+### Challenge Summary
+Binary Tree and BST Implementation
+
+### Solution
+[link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/tree)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/57)
