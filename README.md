@@ -17,6 +17,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 12](#code-challenge-12): FIFO animal shelter
 - [Code Challenge 13](#code-challenge-13): Multi-bracket Validation
 - [Code Challenge 15](#code-challenge-15): Trees Implementation
+- [Code Challenge 16](#code-challenge-16): Fizz Buzz Tree
 
 ## Code 401 Challenges
 
@@ -410,3 +411,13 @@ Binary Tree and BST Implementation
 [link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/tree)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/57)
+
+## Code Challenge 15
+
+### Challenge Summary
+Fizz Buzz Tree
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/fizzbuzz-tree.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/58)
