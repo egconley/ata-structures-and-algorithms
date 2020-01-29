@@ -18,6 +18,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 13](#code-challenge-13): Multi-bracket Validation
 - [Code Challenge 15](#code-challenge-15): Trees Implementation
 - [Code Challenge 16](#code-challenge-16): Fizz Buzz Tree
+- [Code Challenge 17](#code-challenge-17): Breadth-first Traversal
 
 ## Code 401 Challenges
 
@@ -421,3 +422,13 @@ Fizz Buzz Tree
 ![](./code401challenges/src/main/java/code401challenges/assets/fizzbuzz-tree.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/58)
+
+## Code Challenge 16
+
+### Challenge Summary
+Breadth-first Traversal
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/breadth-first.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/59)
