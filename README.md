@@ -387,8 +387,39 @@ public class PseudoQueue<T> {
 First-in, First out Animal Shelter.
 
 ### Solution
+[link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/utilities)
 
 ![](./code401challenges/src/main/java/code401challenges/assets/fifo-animal-shelter.jpg)
+
+```
+public class AnimalShelter<T> {
+
+    Queue<Cat> cats;
+    Queue<Dog> dogs;
+    String pref;
+
+    public AnimalShelter() {
+        this.cats = new Queue<>();
+        this.dogs = new Queue<>();
+    }
+
+    public void shelterEnqueue(Cat cat) {
+        cats.enqueue(cat);
+    }
+
+    public void shelterEnqueue(Dog dog) {
+        dogs.enqueue(dog);
+    }
+
+    public Animal shelterDequeue(String pref) {
+        if (pref == "cat" && !cats.isEmpty()) {
+            return cats.dequeue();
+        } else if (pref == "dog" && !dogs.isEmpty()) {
+            return dogs.dequeue();
+        } else return null;
+    }
+}
+```
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/54)
 
