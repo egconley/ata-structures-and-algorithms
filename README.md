@@ -521,4 +521,4 @@ Find the Maximum Value in a Binary Tree
 
 ![](./code401challenges/src/main/java/code401challenges/assets/find-maximum-binary-tree.jpg)
 
-* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/60)
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/62)
