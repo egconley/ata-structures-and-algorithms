@@ -421,7 +421,7 @@ public class AnimalShelter<T> {
 }
 ```
 
-* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/54)
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/60)
 
 ## Code Challenge 13
 
@@ -429,10 +429,58 @@ public class AnimalShelter<T> {
 Multi-bracket Validation.
 
 ### Solution
+[link to code](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/utilities/MultiBracketValidation.java)
 
 ![](./code401challenges/src/main/java/code401challenges/assets/multi-bracket-validation.jpg)
 
-* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/55)
+```
+public class MultiBracketValidation {
+
+    // https://github.com/codefellows/seattle-java-401d9/blob/master/class-14/brackets/Brackets.java
+    private static HashMap<Character, Character> bracketMap;
+    static {
+        bracketMap = new HashMap<>();
+        bracketMap.put('(', ')');
+        bracketMap.put('[', ']');
+        bracketMap.put('{', '}');
+        bracketMap.put('<', '>');
+    }
+
+    public static boolean validate(String brackets) {
+
+        boolean isBalanced = false;
+        LinkedList<Character> bracketStack = new LinkedList<>();
+
+        for(int i = 0; i < brackets.length(); i++) {
+
+            char current = brackets.charAt(i);
+
+            // handle opening brackets
+            if (bracketMap.containsKey(current)) {
+
+                bracketStack.push(current);
+
+            // handle closing brackets
+            } else if (bracketMap.containsValue(current)) {
+
+                if (!bracketStack.isEmpty()) {
+
+                    char openBracket = bracketStack.pop();
+
+                    if (current == bracketMap.get(openBracket).charValue()) {
+                        isBalanced = true;
+                    } else {
+                        isBalanced = false;
+                    }
+                }
+            }
+        }
+        return isBalanced;
+    }
+}
+```
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/60)
 
 ## Code Challenge 15
 
