@@ -19,6 +19,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 15](#code-challenge-15): Trees Implementation
 - [Code Challenge 16](#code-challenge-16): Fizz Buzz Tree
 - [Code Challenge 17](#code-challenge-17): Breadth-first Traversal
+- [Code Challenge 18](#code-challenge-18): Find the Maximum Value in a Binary Tree
 
 ## Code 401 Challenges
 
@@ -511,3 +512,13 @@ Breadth-first Traversal
 ![](./code401challenges/src/main/java/code401challenges/assets/breadth-first.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/59)
+
+## Code Challenge 18
+
+### Challenge Summary
+Find the Maximum Value in a Binary Tree
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/find-maximum-binary-tree.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/60)
