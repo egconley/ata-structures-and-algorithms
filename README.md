@@ -444,7 +444,7 @@ Binary Tree and BST Implementation
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/57)
 
-## Code Challenge 15
+## Code Challenge 16
 
 ### Challenge Summary
 Fizz Buzz Tree
@@ -454,7 +454,7 @@ Fizz Buzz Tree
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/58)
 
-## Code Challenge 16
+## Code Challenge 17
 
 ### Challenge Summary
 Breadth-first Traversal
