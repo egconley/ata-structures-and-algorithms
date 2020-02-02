@@ -497,11 +497,50 @@ Binary Tree and BST Implementation
 
 ### Challenge Summary
 Fizz Buzz Tree
+
+### Efficiency
+ 
+ **Efficiency: O(n)**
+ 
 ### Solution
+
+[link to code](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/utilities/FizzBuzzTree.java)
 
 ![](./code401challenges/src/main/java/code401challenges/assets/fizzbuzz-tree.jpg)
 
-* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/58)
+```
+public class FizzBuzzTree {
+
+    public Tree<String> fizzBuzzTree(Tree<Integer> intTree) {
+        Node<String> answerRoot = fizzBuzzHelper(intTree.getRoot());
+        return new Tree<>(answerRoot);
+    }
+
+    public Node<String> fizzBuzzHelper(Node<Integer> curr) {
+
+        if (curr!=null) {
+            Node<String> ansNode = new Node<>();
+            if (curr.value%15==0) {
+                ansNode.value = "FizzBuzz";
+            } else if (curr.value%3==0) {
+                ansNode.value = "Fizz";
+            } else if (curr.value%5==0) {
+                ansNode.value = "Buzz";
+            } else {
+                ansNode.value = curr.value.toString();
+            }
+
+            ansNode.left = fizzBuzzHelper(curr.left);
+            ansNode.right = fizzBuzzHelper(curr.right);
+
+            return ansNode;
+
+        } else return null;
+    }
+}
+```
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/63
 
 ## Code Challenge 17
 
