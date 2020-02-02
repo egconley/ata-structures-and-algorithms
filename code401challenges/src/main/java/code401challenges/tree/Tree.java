@@ -11,6 +11,10 @@ public class Tree<T> {
         this.root = root;
     }
 
+    public Node<T> getRoot() {
+        return root;
+    }
+
     public LinkedList<T> preOrder() {
         return preOrder(this.root, new LinkedList<>());
     }
