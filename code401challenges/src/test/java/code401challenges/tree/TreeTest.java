@@ -36,4 +36,5 @@ public class TreeTest {
     public void postOrder() {
         assertEquals("[D, E, B, F, null, C, A]", tree.postOrder().toString());
     }
+
 }
