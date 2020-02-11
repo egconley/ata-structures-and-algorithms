@@ -1,6 +1,7 @@
 package code401challenges.tree;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 public class Tree<T> {
@@ -53,5 +54,4 @@ public class Tree<T> {
         }
         return order;
     }
-
 }
