@@ -125,55 +125,51 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 * [resubmission PR](https://github.com/egconley/data-structures-and-algorithms/pull/42)
 
 ```
-    public static int binarySearch(int[] array, int value) {
-        System.out.println("array: " + Arrays.toString(array) + " target value: " + value);
-        int startSearchIdx = 0;
-        int endSearchIdx = array.length - 1;
-        int target_idx = -1;
-        int midpoint = (endSearchIdx + startSearchIdx)/2;
+public static int binarySearch(int[] arr, int n) {
+        if (arr == null || arr.length == 0) {
+            return -1;
+        } else {
 
-        boolean foundValue = false;
+            int leftIdx = 0;
+            int rightIdx = arr.length - 1;
+            int mpIdx = (rightIdx + leftIdx) / 2;
+            int mpValue = arr[mpIdx];
 
-        System.out.println("array: " + array + " target value: " + value);
+            boolean found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
+            int nIdx = -1;
 
-        System.out.println("mp = " + midpoint + " array[mp]: " + array[midpoint] + " target value: " + value);
-
-        while (foundValue == false) {
-            if (array[midpoint] == value) {
-              System.out.println("#1 array[mp] == value, array[mp] = " + array[midpoint] + " mp: " + midpoint);
-              target_idx = midpoint;
-              System.out.println("value found! array[target_idx] = " + array[target_idx]);
-              foundValue = true;
-            } else if (array[startSearchIdx] == value) {
-              target_idx = startSearchIdx;
-              System.out.println("#2 value found! array[target_idx] = " + array[target_idx]);
-              foundValue = true;
-            } else if (array[endSearchIdx] == value) {
-                target_idx = endSearchIdx;
-                System.out.println("#3 value found! array[target_idx] = " + array[target_idx]);
-                foundValue = true;
-            } else if (value < array[0] || value > array[array.length -1]){
-                System.out.println("#4 value doesn't exist in input array");
-                break;
-            } else if (array[midpoint] > value) {
-                System.out.println("#5 array[mp] > value, array[mp] = " + array[midpoint] + " mp: " + midpoint);
-                endSearchIdx = midpoint;
-
-                midpoint = (endSearchIdx + startSearchIdx)/2;
-                System.out.println("new mp: " + midpoint);
-            } else if (array[midpoint] < value) {
-                System.out.println("#6 array[mp] < value, array[mp] = " + array[midpoint] + " mp: " + midpoint);
-                startSearchIdx = midpoint;
-
-                midpoint = (endSearchIdx + startSearchIdx)/2;
-            } else if ( (endSearchIdx - startSearchIdx) < 0 ) {
-                System.out.println("#7 value doesn't exist in input array");
-                break;
+            if (mpValue==n) {
+                nIdx = mpIdx;
+            } else if (arr[rightIdx]==n) {
+                nIdx = rightIdx;
+            } else if (arr[leftIdx]==n) {
+                nIdx = leftIdx;
             }
+
+            while (!found && leftIdx != mpIdx && rightIdx != mpIdx) {
+                if (mpValue > n) {
+                    rightIdx = --mpIdx;
+
+                } else if (mpValue < n) {
+                    leftIdx = ++mpIdx;
+                }
+
+                mpIdx = (rightIdx + leftIdx) / 2;
+                mpValue = arr[mpIdx];
+                found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
+
+                if (mpValue==n) {
+                    nIdx = mpIdx;
+                } else if (arr[rightIdx]==n) {
+                    nIdx = rightIdx;
+                } else if (arr[leftIdx]==n) {
+                    nIdx = leftIdx;
+                }
+            }
+
+            return nIdx;
+
         }
-        System.out.println("output target_idx = " + target_idx);
-        return target_idx;
-    }
 ```
 
 ## Code Challenge 04
