@@ -565,6 +565,6 @@ Find the Maximum Value in a Binary Tree
 Trace Merge Sort and implement code
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/mergeSort.jpg)
+![](./code401challenges/src/main/java/code401challenges/assets/mergeSortTrace.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/67)
