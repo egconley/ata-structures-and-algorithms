@@ -581,3 +581,7 @@ Implement a hashtable from scrach, including the following methods:
 ### Solution
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/70)
+
+### Resources
+[Introduction to Programming Using Java
+Version 4.1](http://math.hws.edu/eck/cs124/javanotes4/c12/ex-12-3-answer.html)
