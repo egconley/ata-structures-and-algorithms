@@ -21,6 +21,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 17](#code-challenge-17): Breadth-first Traversal
 - [Code Challenge 18](#code-challenge-18): Find the Maximum Value in a Binary Tree
 - [Code Challenge 27](#code-challenge-27): Merge Sort
+- [Code Challenge 30](#code-challenge-30): Hashtable implementation
 
 ## Code 401 Challenges
 
@@ -568,3 +569,15 @@ Trace Merge Sort and implement code
 ![](./code401challenges/src/main/java/code401challenges/assets/mergeSortTraceFinal.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/67)
+
+## Code Challenge 30
+
+### Challenge Summary
+Implement a hashtable from scrach, including the following methods:
+- add: takes in both the key and value, hashes the key, and adds the key and value pair to the table, handling collisions as needed
+- get: akes in the key and returns the value from the table
+- contains: takes in the key and returns a boolean, indicating if the key exists in the table already
+- hash: takes in an arbitrary key and returns an index in the collection
+### Solution
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/70)
