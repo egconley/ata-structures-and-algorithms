@@ -20,6 +20,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 16](#code-challenge-16): Fizz Buzz Tree
 - [Code Challenge 17](#code-challenge-17): Breadth-first Traversal
 - [Code Challenge 18](#code-challenge-18): Find the Maximum Value in a Binary Tree
+- [Code Challenge 27](#code-challenge-27): Merge Sort
 
 ## Code 401 Challenges
 
@@ -557,3 +558,13 @@ Find the Maximum Value in a Binary Tree
 ![](./code401challenges/src/main/java/code401challenges/assets/find-maximum-binary-tree.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/62)
+
+## Code Challenge 27
+
+### Challenge Summary
+Trace Merge Sort and implement code
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/mergeSort.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/67)
