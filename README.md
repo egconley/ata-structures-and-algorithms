@@ -23,6 +23,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 27](#code-challenge-27): Merge Sort
 - [Code Challenge 28](#code-challenge-28): Quick Sort
 - [Code Challenge 30](#code-challenge-30): Hashtable implementation
+- [Code Challenge 31](#code-challenge-31): First Repeated Word in a Book
 
 ## Code 401 Challenges
 
@@ -594,3 +595,15 @@ Implement a hashtable from scrach, including the following methods:
 ### Resources
 [Introduction to Programming Using Java
 Version 4.1](http://math.hws.edu/eck/cs124/javanotes4/c12/ex-12-3-answer.html)
+
+## Code Challenge 31
+
+### Challenge Summary
+Find the first repeated word in a book.
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/firstRepeatedWord1.jpg)
+![](./code401challenges/src/main/java/code401challenges/assets/firstRepeatedWord2.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/73)
+* [link to code](./code401challenges/src/main/java/code401challenges/RepeatedWord)
