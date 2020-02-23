@@ -1,6 +1,6 @@
 # Code Challenges
 
-I built an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visiters to my README understand the app
+Data structures and algorithms practice.
 
 ### Author: Ellen Conley
 
