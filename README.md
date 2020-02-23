@@ -24,6 +24,7 @@ I built an app with a direct and powerful purpose. It does all of the things tha
 - [Code Challenge 28](#code-challenge-28): Quick Sort
 - [Code Challenge 30](#code-challenge-30): Hashtable implementation
 - [Code Challenge 31](#code-challenge-31): First Repeated Word in a Book
+- [Code Challenge 33](#code-challenge-33): Implement a simplified LEFT JOIN for 2 Hashmaps
 
 ## Code 401 Challenges
 
@@ -607,3 +608,14 @@ Find the first repeated word in a book.
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/73)
 * [link to code](./code401challenges/src/main/java/code401challenges/RepeatedWord)
+
+## Code Challenge 33
+
+### Challenge Summary
+Implement a simplified LEFT JOIN for 2 Hashmaps.
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/leftJoin.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/74)
+* [link to code](./code401challenges/src/main/java/code401challenges/LeftJoin)
