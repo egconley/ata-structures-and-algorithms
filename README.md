@@ -624,7 +624,7 @@ Implement a simplified LEFT JOIN for 2 Hashmaps.
 ## Code Challenge 34.5
 
 ### Challenge Summary
-Implement a simplified LEFT JOIN for 2 Hashmaps.
+Find common values in 2 binary trees.
 ### Solution
 
 ![](./code401challenges/src/main/java/code401challenges/assets/treeIntersection1.jpg)
