@@ -621,7 +621,7 @@ Implement a simplified LEFT JOIN for 2 Hashmaps.
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/74)
 * [link to code](./code401challenges/src/main/java/code401challenges/LeftJoin)
 
-## Code Challenge 33
+## Code Challenge 34.5
 
 ### Challenge Summary
 Implement a simplified LEFT JOIN for 2 Hashmaps.
