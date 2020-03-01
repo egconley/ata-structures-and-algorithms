@@ -25,6 +25,7 @@ Data structures and algorithms practice.
 - [Code Challenge 30](#code-challenge-30): Hashtable implementation
 - [Code Challenge 31](#code-challenge-31): First Repeated Word in a Book
 - [Code Challenge 33](#code-challenge-33): Implement a simplified LEFT JOIN for 2 Hashmaps
+- [Code Challenge 34.5](#code-challenge-34.5): Find common values in 2 binary trees.
 
 ## Code 401 Challenges
 
@@ -619,3 +620,15 @@ Implement a simplified LEFT JOIN for 2 Hashmaps.
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/74)
 * [link to code](./code401challenges/src/main/java/code401challenges/LeftJoin)
+
+## Code Challenge 33
+
+### Challenge Summary
+Implement a simplified LEFT JOIN for 2 Hashmaps.
+### Solution
+
+![](./code401challenges/src/main/java/code401challenges/assets/treeIntersection1.jpg)
+![](./code401challenges/src/main/java/code401challenges/assets/treeIntersection2.jpg)
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/75)
+* [link to code](./code401challenges/src/main/java/code401challenges/tree/TreeIntersection)
