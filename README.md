@@ -631,4 +631,4 @@ Find common values in 2 binary trees.
 ![](./code401challenges/src/main/java/code401challenges/assets/treeIntersection2.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/75)
-* [link to code](./code401challenges/src/main/java/code401challenges/tree/TreeIntersection)
+* [link to code](./code401challenges/src/main/java/code401challenges/tree/TreeIntersection.java)
