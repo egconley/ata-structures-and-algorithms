@@ -25,7 +25,8 @@ Data structures and algorithms practice.
 - [Code Challenge 30](#code-challenge-30): Hashtable implementation
 - [Code Challenge 31](#code-challenge-31): First Repeated Word in a Book
 - [Code Challenge 33](#code-challenge-33): Implement a simplified LEFT JOIN for 2 Hashmaps
-- [Code Challenge 34.5](#code-challenge-34.5): Find common values in 2 binary trees.
+- [Code Challenge 34.5](#code-challenge-34.5): Find common values in 2 binary trees
+- [Code Challenge 35](#code-challenge-35): Implement graph from scratch, represented as an adjacency list
 
 ## Code 401 Challenges
 
@@ -632,3 +633,12 @@ Find common values in 2 binary trees.
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/75)
 * [link to code](./code401challenges/src/main/java/code401challenges/tree/TreeIntersection.java)
+
+## Code Challenge 35
+
+### Challenge Summary
+Implement graph from scratch, represented as an adjacency list
+### Solution
+
+* [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/76)
+* [link to code](./code401challenges/src/main/java/code401challenges/graph)
