@@ -26,6 +26,8 @@ public class GraphTest {
 
     @Test
     public void addEdge() {
+        test.addEdge("Ellen", "Christopher", 2, true);
+        System.out.println(test.getNodes());
     }
 
     @Test
