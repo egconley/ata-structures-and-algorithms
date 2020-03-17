@@ -17,24 +17,18 @@ public class BinarySearch {
             int mpIdx = (rightIdx + leftIdx) / 2;
             int mpValue = arr[mpIdx];
 
-            boolean found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
+            boolean found = false;
 
-            while (!found && leftIdx != mpIdx && rightIdx != mpIdx) {
+            while (!found && leftIdx <= rightIdx) {
+                mpValue = arr[mpIdx];
+                found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
                 if (mpValue > n) {
                     rightIdx = --mpIdx;
-                    mpIdx = (rightIdx + leftIdx) / 2;
-                    mpValue = arr[mpIdx];
-                    found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
                 } else if (mpValue < n) {
                     leftIdx = ++mpIdx;
-                    mpIdx = (rightIdx + leftIdx) / 2;
-                    mpValue = arr[mpIdx];
-                    found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
                 }
             }
-
             return found;
-
         }
     }
 
