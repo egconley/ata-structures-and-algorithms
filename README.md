@@ -25,7 +25,7 @@ Data structures and algorithms practice.
 - [Code Challenge 30](#code-challenge-30): Hashtable implementation
 - [Code Challenge 31](#code-challenge-31): First Repeated Word in a Book
 - [Code Challenge 33](#code-challenge-33): Implement a simplified LEFT JOIN for 2 Hashmaps
-- [Code Challenge 34.5](#code-challenge-34.5): Find common values in 2 binary trees
+- [Code Challenge 34](#code-challenge-34): Find common values in 2 binary trees
 - [Code Challenge 35](#code-challenge-35): Implement graph from scratch, represented as an adjacency list
 
 ## Code 401 Challenges
@@ -43,7 +43,6 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/code401challenge01.jpeg)
 
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/35)
 * [submission PR 2](https://github.com/egconley/data-structures-and-algorithms/pull/35)
@@ -65,32 +64,8 @@ Write a function called insertShiftArray which takes in an array and the value t
   - if the input array is an odd-length array, insert value from old array at i, AND insert the input value at i+1.  At indexes greater than i+1, insert values from input array[i-1]
     
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/code401challenge02.jpg)
 
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/39)
-
-```
-    public static int[] insertShiftArray(int[] array, int value) {
-        int[] newArray = new int[array.length +1];
-
-        for (int i=0; i < newArray.length; i++) {
-            if ( i < (array.length/2) ) {
-                newArray[i] = array[i];
-            } else if (i == (int) Math.ceil(array.length/2) && array.length %2 == 0) {
-                newArray[i] = value;
-            } else if (i == (int) Math.ceil(array.length/2) && array.length %2 != 0) {
-                newArray[i] = array[i];
-                newArray[i+1] = value;
-            } else if (i > array.length/2 && array.length %2 == 0) {
-                newArray[i] = array[i-1];
-            } else if (i > (array.length/2 + 1) && array.length %2 != 0) {
-                newArray[i] = array[i-1];
-            }
-        }
-        System.out.println("newArray: " + Arrays.toString(newArray) );
-        return newArray;
-    }
-```
 
 ## Code Challenge 03
 [link to code](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java)
@@ -126,58 +101,9 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
  **Efficiency: O(log n)**
     
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/array-binary-search.jpg)
 
 * [submission PR 1](https://github.com/egconley/data-structures-and-algorithms/pull/41)
 * [resubmission PR](https://github.com/egconley/data-structures-and-algorithms/pull/42)
-
-```
-public static int binarySearch(int[] arr, int n) {
-        if (arr == null || arr.length == 0) {
-            return -1;
-        } else {
-
-            int leftIdx = 0;
-            int rightIdx = arr.length - 1;
-            int mpIdx = (rightIdx + leftIdx) / 2;
-            int mpValue = arr[mpIdx];
-
-            boolean found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
-            int nIdx = -1;
-
-            if (mpValue==n) {
-                nIdx = mpIdx;
-            } else if (arr[rightIdx]==n) {
-                nIdx = rightIdx;
-            } else if (arr[leftIdx]==n) {
-                nIdx = leftIdx;
-            }
-
-            while (!found && leftIdx != mpIdx && rightIdx != mpIdx) {
-                if (mpValue > n) {
-                    rightIdx = --mpIdx;
-
-                } else if (mpValue < n) {
-                    leftIdx = ++mpIdx;
-                }
-
-                mpIdx = (rightIdx + leftIdx) / 2;
-                mpValue = arr[mpIdx];
-                found = (mpValue == n || (arr[leftIdx] == n) || (arr[rightIdx] == n));
-
-                if (mpValue==n) {
-                    nIdx = mpIdx;
-                } else if (arr[rightIdx]==n) {
-                    nIdx = rightIdx;
-                } else if (arr[leftIdx]==n) {
-                    nIdx = leftIdx;
-                }
-            }
-
-            return nIdx;
-
-        }
-```
 
 ## Code Challenge 04
 [link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/linkedlist)
@@ -186,7 +112,6 @@ public static int binarySearch(int[] arr, int n) {
 Implement a singly-linked list
   
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/array-binary-search.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/43)
 
@@ -202,57 +127,8 @@ Implement a singly-linked list
 - .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
   
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/ll-insertions.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/44)
-
-```
-    public void append(String itemName, int itemCount) {
-        Node newNode = new Node(itemName, itemCount, null);
-        Node position = head;
-        if (position == null) {
-            insert(itemName, itemCount);
-        } else {
-            String itemAtPosition;
-            while (position.getLink() != null) {
-                itemAtPosition = position.getItem();
-                position = position.getLink();
-                System.out.println("ItemAtPosition: " + itemAtPosition);
-            }
-            position.setLink(newNode);
-        }
-    }
-
-    public void insertAfter(String item, int newItemCount, String newItemName) {
-        Node newNode = new Node(newItemName, newItemCount, null);
-        Node position = head;
-        String itemAtPosition;
-        Node nextNode = position.getLink();
-        while(!position.getItem().equals(item)) {
-            itemAtPosition = position.getItem();
-            position = position.getLink();
-            itemAtPosition = position.getItem();
-            nextNode = position.getLink();
-        }
-        position.setLink(newNode);
-        newNode.setLink(nextNode);
-    }
-
-    public void insertBefore(String item, int newItemCount, String newItemName) {
-        Node newNode = new Node(newItemName, newItemCount, null);
-        Node position = head;
-        String itemAtPosition;
-        Node nextNode = position.getLink();
-        while(!nextNode.getItem().equals(item)) {
-            itemAtPosition = position.getItem();
-            position = position.getLink();
-            itemAtPosition = position.getItem();
-            nextNode = position.getLink();
-        }
-        position.setLink(newNode);
-        newNode.setLink(nextNode);
-    }
-```
 
 ### Resources
 [Absolute Java, by Walter Savitch - Chapter 15](https://www.csie.ntu.edu.tw/~cyy/courses/oop/13summer/chap15java5th.pdf)
@@ -264,32 +140,9 @@ Implement a singly-linked list
 - method for the Linked List class which takes a number, k, as a parameter and returns the node’s value that is k from the end of the linked list. 
   
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/ll-kth-from-end.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/47)
 
-```
-    public String getKthFromEnd(int k) {
-        int size = 0;
-        Node position = head;
-        while (position != null) {
-            size++;
-            position = position.getLink();
-        }
-
-        if (k >= size || 0 > k) {
-            throw new IndexOutOfBoundsException();
-        } else {
-            int iterationsToTarget = size - k;
-            position = head;
-            while ( iterationsToTarget > 1 ) {
-                iterationsToTarget--;
-                position = position.getLink();
-            }
-        }
-        return position.getItem();
-    }
-```
 ## Code Challenge 08
 
 ### Challenge Summary
@@ -320,9 +173,6 @@ Implement a singly-linked list
  **Efficiency: O(log n)**
   
 ### Solution
-![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-pd-algo.jpg)
-![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-pseudo.jpg)
-![](./code401challenges/src/main/java/code401challenges/assets/ll-merge-visual.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/48)
 
@@ -359,30 +209,6 @@ Implement a singly-linked list
 
 [link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/stacksandqueues)
 
-![](./code401challenges/src/main/java/code401challenges/assets/queue-with-stacks.jpg)
-
-```
-public class PseudoQueue<T> {
-
-    Stack<T> front = new Stack<>();
-    Stack<T>  back = new Stack<>();
-
-    T value;
-
-    public void enqueue(T value) {
-        back.push(value);
-    }
-
-    public T dequeue() {
-        while (!back.toString().equals("NULL")) {
-            front.push(back.pop());
-        }
-        //System.out.println(front.pop());
-        return front.pop();
-    }
-}
-```
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/52)
 
 ## Code Challenge 12
@@ -393,38 +219,6 @@ First-in, First out Animal Shelter.
 ### Solution
 [link to code](https://github.com/egconley/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/utilities)
 
-![](./code401challenges/src/main/java/code401challenges/assets/fifo-animal-shelter.jpg)
-
-```
-public class AnimalShelter<T> {
-
-    Queue<Cat> cats;
-    Queue<Dog> dogs;
-    String pref;
-
-    public AnimalShelter() {
-        this.cats = new Queue<>();
-        this.dogs = new Queue<>();
-    }
-
-    public void shelterEnqueue(Cat cat) {
-        cats.enqueue(cat);
-    }
-
-    public void shelterEnqueue(Dog dog) {
-        dogs.enqueue(dog);
-    }
-
-    public Animal shelterDequeue(String pref) {
-        if (pref == "cat" && !cats.isEmpty()) {
-            return cats.dequeue();
-        } else if (pref == "dog" && !dogs.isEmpty()) {
-            return dogs.dequeue();
-        } else return null;
-    }
-}
-```
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/60)
 
 ## Code Challenge 13
@@ -434,55 +228,6 @@ Multi-bracket Validation.
 
 ### Solution
 [link to code](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/utilities/MultiBracketValidation.java)
-
-![](./code401challenges/src/main/java/code401challenges/assets/multi-bracket-validation.jpg)
-
-```
-public class MultiBracketValidation {
-
-    // https://github.com/codefellows/seattle-java-401d9/blob/master/class-14/brackets/Brackets.java
-    private static HashMap<Character, Character> bracketMap;
-    static {
-        bracketMap = new HashMap<>();
-        bracketMap.put('(', ')');
-        bracketMap.put('[', ']');
-        bracketMap.put('{', '}');
-        bracketMap.put('<', '>');
-    }
-
-    public static boolean validate(String brackets) {
-
-        boolean isBalanced = false;
-        LinkedList<Character> bracketStack = new LinkedList<>();
-
-        for(int i = 0; i < brackets.length(); i++) {
-
-            char current = brackets.charAt(i);
-
-            // handle opening brackets
-            if (bracketMap.containsKey(current)) {
-
-                bracketStack.push(current);
-
-            // handle closing brackets
-            } else if (bracketMap.containsValue(current)) {
-
-                if (!bracketStack.isEmpty()) {
-
-                    char openBracket = bracketStack.pop();
-
-                    if (current == bracketMap.get(openBracket).charValue()) {
-                        isBalanced = true;
-                    } else {
-                        isBalanced = false;
-                    }
-                }
-            }
-        }
-        return isBalanced;
-    }
-}
-```
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/60)
 
@@ -509,40 +254,6 @@ Fizz Buzz Tree
 
 [link to code](https://github.com/egconley/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/utilities/FizzBuzzTree.java)
 
-![](./code401challenges/src/main/java/code401challenges/assets/fizzbuzz-tree.jpg)
-
-```
-public class FizzBuzzTree {
-
-    public Tree<String> fizzBuzzTree(Tree<Integer> intTree) {
-        Node<String> answerRoot = fizzBuzzHelper(intTree.getRoot());
-        return new Tree<>(answerRoot);
-    }
-
-    public Node<String> fizzBuzzHelper(Node<Integer> curr) {
-
-        if (curr!=null) {
-            Node<String> ansNode = new Node<>();
-            if (curr.value%15==0) {
-                ansNode.value = "FizzBuzz";
-            } else if (curr.value%3==0) {
-                ansNode.value = "Fizz";
-            } else if (curr.value%5==0) {
-                ansNode.value = "Buzz";
-            } else {
-                ansNode.value = curr.value.toString();
-            }
-
-            ansNode.left = fizzBuzzHelper(curr.left);
-            ansNode.right = fizzBuzzHelper(curr.right);
-
-            return ansNode;
-
-        } else return null;
-    }
-}
-```
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/63
 
 ## Code Challenge 17
@@ -550,8 +261,6 @@ public class FizzBuzzTree {
 ### Challenge Summary
 Breadth-first Traversal
 ### Solution
-
-![](./code401challenges/src/main/java/code401challenges/assets/breadth-first.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/59)
 
@@ -561,8 +270,6 @@ Breadth-first Traversal
 Find the Maximum Value in a Binary Tree
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/find-maximum-binary-tree.jpg)
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/62)
 
 ## Code Challenge 27
@@ -571,8 +278,6 @@ Find the Maximum Value in a Binary Tree
 Trace Merge Sort and implement code
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/mergeSortTraceFinal.jpg)
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/67)
 
 ## Code Challenge 28
@@ -580,8 +285,6 @@ Trace Merge Sort and implement code
 ### Challenge Summary
 Trace Quick Sort and implement code
 ### Solution
-
-![](./code401challenges/src/main/java/code401challenges/assets/quickSortTrace.jpg)
 
 ## Code Challenge 30
 
@@ -605,9 +308,6 @@ Version 4.1](http://math.hws.edu/eck/cs124/javanotes4/c12/ex-12-3-answer.html)
 Find the first repeated word in a book.
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/firstRepeatedWord1.jpg)
-![](./code401challenges/src/main/java/code401challenges/assets/firstRepeatedWord2.jpg)
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/73)
 * [link to code](./code401challenges/src/main/java/code401challenges/RepeatedWord)
 
@@ -617,19 +317,14 @@ Find the first repeated word in a book.
 Implement a simplified LEFT JOIN for 2 Hashmaps.
 ### Solution
 
-![](./code401challenges/src/main/java/code401challenges/assets/leftJoin.jpg)
-
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/74)
 * [link to code](./code401challenges/src/main/java/code401challenges/LeftJoin)
 
-## Code Challenge 34.5
+## Code Challenge 34
 
 ### Challenge Summary
 Find common values in 2 binary trees.
 ### Solution
-
-![](./code401challenges/src/main/java/code401challenges/assets/treeIntersection1.jpg)
-![](./code401challenges/src/main/java/code401challenges/assets/treeIntersection2.jpg)
 
 * [submission PR](https://github.com/egconley/data-structures-and-algorithms/pull/75)
 * [link to code](./code401challenges/src/main/java/code401challenges/tree/TreeIntersection.java)
