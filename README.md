@@ -34,3 +34,18 @@ Advanced Software Development in Java with SpringMVC & Android
 
 ## JavaScript 301 Code Challenges
 ### Intermediate Software Development
+
+- [Chaining Methods](./code301challenges/src/chaining_methods/challenges-10.test.js)
+- [Combo](./code301challenges/src/combo/challenges-14.test.js)
+- [Filter](./code301challenges/src/filter/challenges-08.test.js)
+- [For Each](./code301challenges/src/for-each/challenges-01.test.js)
+- [Includes Every Substring charAt](./code301challenges/src/includes_every_substring_charAt/challenges-13.test.js)
+- [Map](./code301challenges/src/map/challenges-07.test.js)
+- [Object/Keys/Values/Entries](./code301challenges/src/object-keys-values-entries/challenges-06.test.js)
+- [Reduce](./code301challenges/src/reduce/challenges-09.test.js)
+- [Regex Part 1](./code301challenges/src/regex-part1/challenges-04.test.js)
+- [Regex Part 2](./code301challenges/src/regex-part2/challenges-11.test.js)
+- [Sort](./code301challenges/src/sort/challenges-03.test.js)
+- [Split/Join/Slice/Splice](./code301challenges/src/split-join-slice-splice/challenges-05.test.js)
+- [2D Arrays](./code301challenges/src/two-dim-arrays/challenges-12.test.js)
+- [Value vs. Reference](./code301challenges/src/value-vs-reference/challenges-02.test.js)
