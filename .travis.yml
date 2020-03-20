@@ -6,3 +6,5 @@ matrix:
     - language: node_js
       before_script:
         - cd code301challenges
+      script:
+        - yarn test  
