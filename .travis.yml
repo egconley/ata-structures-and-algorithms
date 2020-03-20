@@ -4,6 +4,8 @@ matrix:
       before_script:
         - cd code401challenges
     - language: node_js
+      node_js:
+        - "12"
       before_script:
         - cd code301challenges
       script:
