@@ -224,5 +224,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows,webstorm,visualstudiocode

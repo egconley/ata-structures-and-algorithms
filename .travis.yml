@@ -1,0 +1,8 @@
+matrix:
+  include:
+    - language: java
+      before_script:
+        - cd code401challenges
+    - language: node_js
+      before_script:
+        - cd code301challenges
