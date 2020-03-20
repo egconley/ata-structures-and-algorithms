@@ -3,15 +3,3 @@ matrix:
     - language: java
       before_script:
         - cd code401challenges
-    - language: node_js
-      node_js:
-        - "12"
-      install:
-        - nvm install node
-        - node -v
-        - npm i -g yarn
-        - yarn install  
-      before_script:
-        - cd code301challenges
-      script:
-        - yarn test  
