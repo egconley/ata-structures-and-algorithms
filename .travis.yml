@@ -7,7 +7,6 @@ matrix:
       node_js:
         - "12"
       install:
-        - bundle install
         - nvm install node
         - node -v
         - npm i -g yarn
