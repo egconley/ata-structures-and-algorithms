@@ -33,7 +33,7 @@ Advanced Software Development in Java with SpringMVC & Android
 - [Implement graph from scratch, represented as an adjacency list](./code401challenges/src/main/java/code401challenges/graph)
 
 ## JavaScript 301 Code Challenges
-### Intermediate Software Development
+Intermediate Software Development
 
 - [Chaining Methods](./code301challenges/src/chaining_methods/challenges-10.test.js)
 - [Combo](./code301challenges/src/combo/challenges-14.test.js)
