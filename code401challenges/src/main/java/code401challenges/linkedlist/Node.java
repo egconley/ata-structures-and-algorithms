@@ -4,44 +4,35 @@ package code401challenges.linkedlist;
 
 public class Node {
     private String item;
-    private int count;
-    private Node link;
+    private Node next;
 
     public Node() {
-        link = null;
+        next = null;
         item = null;
-        count = 0;
     }
 
     public Node(String newItem, int newCount, Node linkValue) {
         setData(newItem, newCount);
-        link = linkValue;
-        //System.out.println("link = " + link + ", item = " + item);
+        next = linkValue;
     }
 
     public void setData(String newItem, int newCount) {
         item = newItem;
-        count = newCount;
     }
 
-    public void setLink(Node newLink) {
-        link = newLink;
+    public void setNext(Node newLink) {
+        next = newLink;
     }
 
     public String getItem() {
         return item;
     }
 
-    public int getCount() {
-        return count;
+    public Node getNext() {
+        return next;
     }
 
-    public Node getLink() {
-        return link;
+    public String toString() {
+        return item + " -> " + (this.next == null ? "NULL" : this.next.toString());
     }
-
-    // fix to match your code
-//    public String toString() {
-//        return item + " -> " + (this.nextNode == null ? "NULL" : this.nextNode.toString());
-//    }
 }

@@ -7,24 +7,6 @@ import java.util.NoSuchElementException;
 public class LinkedList {
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.insert("Apples", 1);
-        list.insert("Bananas", 2);
-        list.insert("Cantaloupe", 3);
-        list.insert("Mangosteen", 4);
-        list.insert("Oranges", 5);
-        list.insert("Pears", 6);
-
-        System.out.println(list.toString());
-
-        System.out.println(list.getKthFromEnd(4));
-
-        //System.out.println(list.size());
-
-        //list.append("Mangosteen", 3);
-        //list.insertAfter("Bananas", 4, "Oranges");
-        //list.insertBefore("Apples", 4, "Oranges");
-        //System.out.println(list.toString());
     }
 
     private Node head;
@@ -46,58 +28,41 @@ public class LinkedList {
         if (position == null) {
             insert(itemName, itemCount);
         } else {
-            String itemAtPosition;
-            while (position.getLink() != null) {
-                itemAtPosition = position.getItem();
-                position = position.getLink();
-                System.out.println("ItemAtPosition: " + itemAtPosition);
+            while (position.getNext() != null) {
+                position = position.getNext();
             }
-            position.setLink(newNode);
+            position.setNext(newNode);
         }
     }
 
     public void insertAfter(String item, int newItemCount, String newItemName) {
         Node newNode = new Node(newItemName, newItemCount, null);
         Node position = head;
-        String itemAtPosition;
-        Node nextNode = position.getLink();
+        Node nextNode = position.getNext();
         while(!position.getItem().equals(item)) {
-            itemAtPosition = position.getItem();
-            //System.out.println("itemAtPosition 1 = " + itemAtPosition);
-            //System.out.println("nextNode 1 = " + nextNode.getItem());
-            position = position.getLink();
-            itemAtPosition = position.getItem();
-            nextNode = position.getLink();
-            //System.out.println("itemAtPosition 2 = " + itemAtPosition);
-            //System.out.println("nextNode 2 = " + nextNode.getItem());
+            position = position.getNext();
+            nextNode = position.getNext();
         }
-        position.setLink(newNode);
-        newNode.setLink(nextNode);
+        position.setNext(newNode);
+        newNode.setNext(nextNode);
     }
 
     public void insertBefore(String item, int newItemCount, String newItemName) {
         Node newNode = new Node(newItemName, newItemCount, null);
         Node position = head;
-        String itemAtPosition;
-        Node nextNode = position.getLink();
+        Node nextNode = position.getNext();
         while(!nextNode.getItem().equals(item)) {
-            itemAtPosition = position.getItem();
-            //System.out.println("itemAtPosition 1 = " + itemAtPosition);
-            //System.out.println("nextNode 1 = " + nextNode.getItem());
-            position = position.getLink();
-            itemAtPosition = position.getItem();
-            nextNode = position.getLink();
-            //System.out.println("itemAtPosition 2 = " + itemAtPosition);
-            //System.out.println("nextNode 2 = " + nextNode.getItem());
+            position = position.getNext();
+            nextNode = position.getNext();
         }
-        position.setLink(newNode);
-        newNode.setLink(nextNode);
+        position.setNext(newNode);
+        newNode.setNext(nextNode);
     }
 
     // removes head and returns true if the list contained at least one node.  Returns false if the list was empty
     public boolean deleteHeadNode() {
         if (head != null) {
-            head = head.getLink();
+            head = head.getNext();
             return true;
         } else {
             return false;
@@ -110,7 +75,7 @@ public class LinkedList {
         Node position = head;
         while (position != null) {
             count++;
-            position = position.getLink();
+            position = position.getNext();
         }
         return count;
     }
@@ -121,9 +86,8 @@ public class LinkedList {
         Node position = head;
         while (position != null) {
             size++;
-            position = position.getLink();
+            position = position.getNext();
         }
-        //System.out.println("size = " + size);
 
         if (k >= size || 0 > k) {
             throw new IndexOutOfBoundsException();
@@ -131,11 +95,8 @@ public class LinkedList {
             int iterationsToTarget = size - k;
             position = head;
             while ( iterationsToTarget > 1 ) {
-                //System.out.println("position.getItem() = " + position.getItem());
-                //System.out.println("iterationsToTarget = " + iterationsToTarget);
                 iterationsToTarget--;
-                //System.out.println("iterationsToTarget = " + iterationsToTarget);
-                position = position.getLink();
+                position = position.getNext();
             }
         }
         return position.getItem();
@@ -156,7 +117,7 @@ public class LinkedList {
             if (itemAtPosition.equals(target)) {
                 return position;
             }
-            position = position.getLink();
+            position = position.getNext();
         }
         return null; //target was not found.
     }
@@ -175,7 +136,7 @@ public class LinkedList {
             String itemAsString = "{ " + position.getItem() + " }";
             LinkedListString += itemAsString + " -> ";
 
-            position = position.getLink();
+            position = position.getNext();
         }
         LinkedListString += "NULL";
         return LinkedListString;
