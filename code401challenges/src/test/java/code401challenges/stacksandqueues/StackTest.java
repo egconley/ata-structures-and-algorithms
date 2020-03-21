@@ -10,7 +10,6 @@ public class StackTest {
     public void push() {
         Stack<String> testStack = new Stack<>();
         testStack.push("first thing");
-        System.out.println(testStack);
         assertEquals("{ first thing } -> NULL", testStack.toString());
     }
 
@@ -19,9 +18,7 @@ public class StackTest {
         Stack<String> testStack = new Stack<>();
         testStack.push("first thing");
         testStack.push("second thing");
-        System.out.println(testStack);
         assertEquals("second thing", testStack.pop());
-        System.out.println(testStack);
         assertEquals("first thing", testStack.pop());
     }
 
@@ -36,7 +33,6 @@ public class StackTest {
         Stack<String> testStack = new Stack<>();
         testStack.push("first thing");
         testStack.push("second thing");
-        System.out.println(testStack);
         assertEquals("second thing", testStack.peek());
     }
 

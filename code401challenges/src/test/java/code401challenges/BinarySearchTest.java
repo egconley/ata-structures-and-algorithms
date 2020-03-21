@@ -1,8 +1,5 @@
 package code401challenges;
 
-import code401challenges.tree.Node;
-import code401challenges.tree.Tree;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

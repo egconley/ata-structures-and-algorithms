@@ -1,10 +1,7 @@
 package code401challenges.graph;
 
-import code401challenges.LeftJoin.LeftJoin;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Hashtable;
 
 import static org.junit.Assert.*;
 
@@ -27,7 +24,6 @@ public class GraphTest {
     @Test
     public void addEdge() {
         test.addEdge("Ellen", "Christopher", 2, true);
-        System.out.println(test.getNodes());
     }
 
     @Test
