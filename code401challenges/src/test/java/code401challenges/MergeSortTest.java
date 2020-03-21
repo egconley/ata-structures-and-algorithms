@@ -20,6 +20,5 @@ public class MergeSortTest {
     @Test
     public void mergeSort() {
         test.mergeSort(testArray);
-        System.out.println(Arrays.toString(test.mergeSort(testArray)));
     }
 }

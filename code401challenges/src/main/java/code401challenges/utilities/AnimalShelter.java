@@ -1,6 +1,5 @@
 package code401challenges.utilities;
 
-import code401challenges.linkedlist.LinkedList;
 import code401challenges.stacksandqueues.Queue;
 
 public class AnimalShelter<T> {

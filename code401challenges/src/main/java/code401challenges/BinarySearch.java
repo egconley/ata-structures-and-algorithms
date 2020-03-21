@@ -3,9 +3,6 @@ package code401challenges;
 import java.util.Arrays;
 
 public class BinarySearch {
-    public static void main(String[] args) {
-
-    }
 
     public static boolean binarySearchBoolean(int[] arr, int n) {
         if (arr == null || arr.length == 0) {
@@ -74,9 +71,7 @@ public class BinarySearch {
                     nIdx = leftIdx;
                 }
             }
-
             return nIdx;
-
         }
     }
 }

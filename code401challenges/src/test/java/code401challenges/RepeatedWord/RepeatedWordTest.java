@@ -1,7 +1,5 @@
 package code401challenges.RepeatedWord;
 
-import code401challenges.tree.Node;
-import code401challenges.tree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 

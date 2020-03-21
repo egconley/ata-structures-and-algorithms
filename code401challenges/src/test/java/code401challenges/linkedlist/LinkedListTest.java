@@ -1,8 +1,5 @@
 package code401challenges.linkedlist;
 
-import code401challenges.ArrayShift;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -160,63 +157,11 @@ public class LinkedListTest {
         assertEquals(expected, actual);
     }
 
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void test_LinkedListKthOutOfBounds1() {
-        LinkedList test9 = new LinkedList();
-
-        test9.insert("Apples", 1);
-        test9.insert("Bananas", 2);
-        test9.insert("Cantaloupe", 3);
-        test9.insert("Mangosteen", 4);
-        test9.insert("Oranges", 5);
-        test9.insert("Pears", 6);
-
-        //System.out.println(test9.toString());
-
-        System.out.println(test9.getKthFromEnd(7));
-    }
-
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void test_LinkedListKthOutOfBounds2() {
-        LinkedList test9 = new LinkedList();
-
-        test9.insert("Apples", 1);
-        test9.insert("Bananas", 2);
-        test9.insert("Cantaloupe", 3);
-        test9.insert("Mangosteen", 4);
-        test9.insert("Oranges", 5);
-        test9.insert("Pears", 6);
-
-        //System.out.println(test9.toString());
-
-        System.out.println(test9.getKthFromEnd(6));
-    }
-
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void test_LinkedListKthOutOfBounds3() {
-        LinkedList test9 = new LinkedList();
-
-        test9.insert("Apples", 1);
-        test9.insert("Bananas", 2);
-        test9.insert("Cantaloupe", 3);
-        test9.insert("Mangosteen", 4);
-        test9.insert("Oranges", 5);
-        test9.insert("Pears", 6);
-
-        //System.out.println(test9.toString());
-
-        System.out.println(test9.getKthFromEnd(-3));
-    }
-
     @Test
     public void test_LinkedListKthOfListSize1() {
         LinkedList test9 = new LinkedList();
 
         test9.insert("Apples", 1);
-
-        //System.out.println(test9.toString());
-
-        System.out.println(test9.getKthFromEnd(0));
     }
 
     @Test
@@ -229,9 +174,5 @@ public class LinkedListTest {
         test9.insert("Mangosteen", 4);
         test9.insert("Oranges", 5);
         test9.insert("Pears", 6);
-
-        //System.out.println(test9.toString());
-
-        System.out.println(test9.getKthFromEnd(3));
     }
 }

@@ -1,12 +1,9 @@
 package code401challenges;
 
-import java.util.Arrays;
-
 public class MergeSort {
 
     public int[] mergeSort(int[] arr) {
 
-        System.out.println(Arrays.toString(arr));
         int n = arr.length;
         if (n>1) {
             int mid = n/2;
@@ -41,7 +38,6 @@ public class MergeSort {
                 arr[k] = right[j];
                 j=j+1;
             }
-            System.out.println("while - " + Arrays.toString(arr));
             k=k+1;
         }
 
@@ -58,7 +54,6 @@ public class MergeSort {
                 i++;
             }
         }
-
         return arr;
     }
 }
