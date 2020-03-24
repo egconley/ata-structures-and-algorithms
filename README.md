@@ -24,6 +24,7 @@ Advanced Software Development in Java with SpringMVC & Android
 #### Sorting Algorithms
 - [Merge Sort](./code401challenges/src/main/java/code401challenges/MergeSort.java)
 - [Selection Sort](./code401challenges/src/main/java/code401challenges/SelectionSort.java)
+- [Insertion Sort](./code401challenges/src/main/java/code401challenges/InsertionSort.java)
 #### HashTables
 - [Hashtable implementation](./code401challenges/src/main/java/code401challenges/HashTable.java)
 #### HashSets
