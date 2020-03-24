@@ -32,6 +32,8 @@ Advanced Software Development in Java with SpringMVC & Android
 - [Implement a simplified LEFT JOIN for 2 Hashmaps](./code401challenges/src/main/java/code401challenges/LeftJoin/LeftJoin.java)
 #### Graphs
 - [Implement graph from scratch, represented as an adjacency list](./code401challenges/src/main/java/code401challenges/graph)
+#### Recursion
+- [Palindrome](./code401challenges/src/main/java/code401challenges/isPalindrome.java)
 
 ## JavaScript 301 Code Challenges
 Intermediate Software Development
