@@ -15,14 +15,6 @@ public class SelectionSortTest {
     }
 
     @Test
-    public void swap() {
-    }
-
-    @Test
-    public void getMinIdx() {
-    }
-
-    @Test
     public void selectionSort() {
         int[] input = new int[]{9, 2, 5, 4, 13, 8, 1};
         int[] expected = new int[]{1, 2, 4, 5, 8, 9, 13};

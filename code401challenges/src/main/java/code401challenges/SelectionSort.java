@@ -1,33 +1,19 @@
 package code401challenges;
 
 public class SelectionSort {
-    public void swap(int[] array, int firstIdx, int secondIdx) {
-        int temp = array[firstIdx];
-        array[firstIdx] = array[secondIdx];
-        array[secondIdx] = temp;
-    }
 
-    public int getMinIdx(int[] array, int referenceIdx) {
-        int minValue = array[referenceIdx];
-        int minIdx = referenceIdx;
+    public int[] selectionSort(int[] arr){
 
-        // loop over values in array, starting to the right of the reference index
-        for (int i=minIdx+1; i<array.length; i++) {
-            if (array[i] < minValue) {
-                // if an item less than the reference value is found, update minIdx and minValue
-                minIdx = i;
-                minValue = array[i];
+        for (int i=0; i<arr.length; i++) {
+            int head = arr[i];
+            for (int j=i; j<arr.length; j++) {
+                if (arr[j]<=head) {
+                    head = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = head;
+                }
             }
         }
-        return minIdx;
-    }
-
-    public void selectionSort(int[] array) {
-        int startIdx = 0;
-        while (startIdx < array.length) {
-            int minIdx = getMinIdx(array, startIdx);
-            swap(array, startIdx, minIdx);
-            startIdx++;
-        }
+        return arr;
     }
 }
