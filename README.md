@@ -34,7 +34,7 @@ Advanced Software Development in Java with SpringMVC & Android
 - [Implement graph from scratch, represented as an adjacency list](./code401challenges/src/main/java/code401challenges/graph)
 #### Recursion
 - [Palindrome](./code401challenges/src/main/java/code401challenges/isPalindrome.java)
-- [Better Fibonacci)](./code401challenges/src/main/java/code401challenges/betterFibonacci.java)
+- [Better Fibonacci (iterative, linear time constant space)](./code401challenges/src/main/java/code401challenges/betterFibonacci.java)
 #### String Manipulation
 - [Make Anagram](./code401challenges/src/main/java/code401challenges/makeAnagram.java)
 
