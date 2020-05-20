@@ -37,6 +37,8 @@ Advanced Software Development in Java with SpringMVC & Android
 - [Better Fibonacci (iterative, linear time constant space)](./code401challenges/src/main/java/code401challenges/betterFibonacci.java)
 #### String Manipulation
 - [Make Anagram](./code401challenges/src/main/java/code401challenges/makeAnagram.java)
+#### Math
+- [pow](./code401challenges/src/main/java/code401challenges/pow.java)
 
 ## JavaScript 301 Code Challenges
 Intermediate Software Development
