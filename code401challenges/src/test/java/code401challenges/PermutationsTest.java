@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class PermutationsTest {
 
     Permutations test = new Permutations();
-    
+
     @Test
     public void permutation() {
         assertTrue(test.permutation("CAT", "TCA"));
