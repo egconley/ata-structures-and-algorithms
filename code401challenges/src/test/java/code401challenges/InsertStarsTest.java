@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class insertStarsTest {
+public class InsertStarsTest {
 
-    insertStars test = new insertStars();
+    InsertStars test = new InsertStars();
     @Test
     public void insertPairStar() {
         assertTrue(test.insertPairStar("cac").equals("cac"));

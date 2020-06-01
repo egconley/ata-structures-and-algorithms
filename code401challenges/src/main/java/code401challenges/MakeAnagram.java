@@ -2,7 +2,7 @@ package code401challenges;
 
 import java.util.HashMap;
 
-public class makeAnagram {
+public class MakeAnagram {
     // returns the number of deletions required to make to strings anagrams of each other
     static int makeAnagram(String a, String b) {
 

@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class makeAnagramTest {
+public class MakeAnagramTest {
 
-    makeAnagram test = new makeAnagram();
+    MakeAnagram test = new MakeAnagram();
 
     @Test
     public void makeAnagram1() {

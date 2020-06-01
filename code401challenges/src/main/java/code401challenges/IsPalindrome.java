@@ -1,6 +1,6 @@
 package code401challenges;
 
-public class isPalindrome {
+public class IsPalindrome {
     public char firstChar(String str) {
         return str.charAt(0);
     }

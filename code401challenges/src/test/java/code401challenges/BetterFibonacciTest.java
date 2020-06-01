@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class betterFibonacciTest {
+public class BetterFibonacciTest {
 
-    betterFibonacci test = new betterFibonacci();
+    BetterFibonacci test = new BetterFibonacci();
 
     @Test
     public void betterFibonacci() {

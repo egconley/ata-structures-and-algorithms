@@ -3,11 +3,9 @@ package code401challenges;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+public class IsPalindromeTest {
 
-public class isPalindromeTest {
-
-    isPalindrome test = new isPalindrome();
+    IsPalindrome test = new IsPalindrome();
 
     @Test
     public void firstChar() {

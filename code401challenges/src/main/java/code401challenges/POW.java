@@ -1,6 +1,6 @@
 package code401challenges;
 
-public class pow {
+public class POW {
     // Write a method - pow(x,n) that returns the value of x raised to the power of n (xn). n can be negative!
     public double pow(double x, int n) {
         double answer = 1;

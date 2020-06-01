@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class powTest {
+public class POWTest {
 
-    pow test = new pow();
+    POW test = new POW();
     @Test
     public void powZero() {
         assertEquals(1, test.pow(5, 0), 0.001);

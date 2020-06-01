@@ -1,6 +1,6 @@
 package code401challenges;
 
-public class betterFibonacci {
+public class BetterFibonacci {
     public int betterFibonacci(int n) {
 
         int fibn = 0;

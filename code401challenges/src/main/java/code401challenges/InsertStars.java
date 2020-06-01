@@ -1,6 +1,6 @@
 package code401challenges;
 
-public class insertStars {
+public class InsertStars {
     // Given a string, recursively compute a new string where the identical adjacent characters in the original string are separated by a "*".
     public String insertPairStar(String s) {
 
