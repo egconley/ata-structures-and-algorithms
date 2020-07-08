@@ -8,21 +8,6 @@ public class IsPalindromeTest {
     IsPalindrome test = new IsPalindrome();
 
     @Test
-    public void firstChar() {
-        Assert.assertEquals('e', test.firstChar("ellen"));
-    }
-
-    @Test
-    public void lastChar() {
-        Assert.assertEquals('n', test.lastChar("ellen"));
-    }
-
-    @Test
-    public void middleChars() {
-        Assert.assertEquals("lle", test.middleChars("ellen"));
-    }
-
-    @Test
     public void isPalindrome() {
         Assert.assertTrue(test.isPalindrome("tacocat"));
         Assert.assertFalse(test.isPalindrome("ellen"));

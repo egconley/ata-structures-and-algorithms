@@ -1,27 +1,21 @@
 package code401challenges;
 
 public class IsPalindrome {
-    public char firstChar(String str) {
-        return str.charAt(0);
-    }
-
-    public char lastChar(String str) {
-        return str.charAt(str.length()-1);
-    }
-
-    public String middleChars(String str) {
-        return str.substring(1, str.length()-1);
-    }
 
     public boolean isPalindrome(String str) {
-        if (str.length() <=1) {
-            return true;
-        } else if (firstChar(str) != lastChar(str)) {
-            return false;
-        } else if (str.length()==2 && firstChar(str) == lastChar(str)){
+        if (str==null || str.length()==1) {
             return true;
         } else {
-            return isPalindrome(middleChars(str));
+            boolean answer = true;
+            int lastIdx = str.length()-1;
+            for (int i=0; i<str.length()/2; i++) {
+                Character front = str.charAt(i);
+                Character back = str.charAt(lastIdx-i);
+                if (front!=back) {
+                    answer = false;
+                }
+            }
+            return answer;
         }
     }
 }
